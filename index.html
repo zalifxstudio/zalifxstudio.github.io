@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website pribadi bertema alam — tumbuh, hijau, dan tenang." />
+  <title>Nama Anda | Tumbuh Bersama Alam</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Background ornaments -->
+  <div class="bg-leaves" aria-hidden="true">
+    <span class="leaf leaf--1">🍃</span>
+    <span class="leaf leaf--2">🌿</span>
+    <span class="leaf leaf--3">🍃</span>
+    <span class="leaf leaf--4">🌱</span>
+    <span class="leaf leaf--5">🌿</span>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo">
+        <span class="navbar__logo-icon">🌿</span>
+        <span>Hijau<strong>Tumbuh</strong></span>
+      </a>
+      <button class="navbar__toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <nav class="navbar__links" id="navLinks">
+        <a href="#about">Tentang</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#projects">Karya</a>
+        <a href="#journal">Jurnal</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__sun"></div>
+      <svg class="hero__hills" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="#a7d4a4" fill-opacity=".5" d="M0,224L60,202.7C120,181,240,139,360,144C480,149,600,203,720,213.3C840,224,960,192,1080,170.7C1200,149,1320,139,1380,133.3L1440,128L1440,320L0,320Z"/>
+        <path fill="#7bbf78" fill-opacity=".7" d="M0,256L80,234.7C160,213,320,171,480,170.7C640,171,800,213,960,224C1120,235,1280,213,1360,202.7L1440,192L1440,320L0,320Z"/>
+        <path fill="#3f8a3a" d="M0,288L80,272C160,256,320,224,480,229.3C640,235,800,277,960,277.3C1120,277,1280,235,1360,213.3L1440,192L1440,320L0,320Z"/>
+      </svg>
+    </div>
+
+    <div class="container hero__content">
+      <span class="hero__badge">🌱 Halo, salam hijau</span>
+      <h1 class="hero__name">Nama <em>Anda</em></h1>
+      <p class="hero__title">Tumbuh perlahan — seperti pohon, akarnya dalam.</p>
+      <p class="hero__desc">
+        Saya seorang pencipta digital yang terinspirasi dari alam: membangun web yang
+        sederhana, jujur, dan menyegarkan — sebagaimana embun pagi.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">Lihat Karya 🌾</a>
+        <a href="#contact" class="btn btn--outline">Sapa Saya</a>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Scroll ke bawah">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== TENTANG ===== -->
+  <section class="section section--cream" id="about">
+    <div class="container">
+      <p class="section__eyebrow">— Tentang Saya —</p>
+      <h2 class="section__title">Akar yang Dalam, <em>Daun yang Lebar</em></h2>
+
+      <div class="about__grid">
+        <div class="about__photo-wrap">
+          <div class="about__photo-frame">
+            <div class="about__photo-placeholder">🌳</div>
+            <div class="about__photo-deco about__photo-deco--1">🍃</div>
+            <div class="about__photo-deco about__photo-deco--2">🌿</div>
+          </div>
+        </div>
+
+        <div class="about__text">
+          <p>
+            Saya percaya proses yang baik tumbuh dari kesabaran. Seperti pohon yang
+            tidak terburu-buru, namun pasti menjulang — saya menghadirkan karya digital
+            yang lahir dari ketelitian, keseimbangan, dan rasa.
+          </p>
+          <p>
+            Berbasis di Indonesia, saya bekerja dengan klien yang peduli pada detail
+            dan keberlanjutan. Di luar layar, saya berkebun, mendaki, dan minum kopi
+            di teras pagi.
+          </p>
+
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__num">5+</span>
+              <span class="stat__label">Tahun Pengalaman</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">40+</span>
+              <span class="stat__label">Proyek Tumbuh</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">∞</span>
+              <span class="stat__label">Cinta pada Alam</span>
+            </div>
+          </div>
+
+          <a href="assets/cv.pdf" class="btn btn--primary" download>📄 Unduh CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEAHLIAN ===== -->
+  <section class="section section--forest" id="skills">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">— Yang Saya Tanam —</p>
+      <h2 class="section__title section__title--light">Keahlian <em>yang Tumbuh</em></h2>
+
+      <div class="skills__grid">
+        <div class="skill-card">
+          <div class="skill-card__icon">🌱</div>
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript — fondasi yang kokoh seperti akar.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">🌿</div>
+          <h3>React &amp; Vue</h3>
+          <p>Komponen yang bercabang rapi, mudah dirawat dan diperbesar.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">🌳</div>
+          <h3>Node.js</h3>
+          <p>Backend yang menopang — kuat dan tahan terhadap musim apa pun.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">🍃</div>
+          <h3>UI/UX Design</h3>
+          <p>Desain yang menyatu seperti daun di angin — alami dan ringan.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">🌾</div>
+          <h3>Responsive</h3>
+          <p>Tumbuh menyesuaikan layar, dari ladang lebar hingga ponsel kecil.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">🌻</div>
+          <h3>Performance</h3>
+          <p>Cepat seperti embun yang menguap — ringan dan hemat sumber daya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROYEK ===== -->
+  <section class="section section--cream" id="projects">
+    <div class="container">
+      <p class="section__eyebrow">— Karya Tangan —</p>
+      <h2 class="section__title">Kebun <em>Proyek</em></h2>
+
+      <div class="projects__grid">
+
+        <article class="project-card">
+          <div class="project-card__img project-card__img--moss">
+            <span>🌲</span>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__cat">Aplikasi Web</span>
+            <h3>Hutan Digital</h3>
+            <p>Platform edukasi konservasi hutan dengan peta interaktif dan cerita warga.</p>
+            <div class="project-card__tags">
+              <span class="tag">React</span>
+              <span class="tag">Mapbox</span>
+              <span class="tag">Node</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="link-arrow">Demo →</a>
+              <a href="#" class="link-arrow">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__img project-card__img--leaf">
+            <span>🌾</span>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__cat">E-Commerce</span>
+            <h3>Tani Tumbuh</h3>
+            <p>Toko hasil bumi dari petani lokal — dari ladang langsung ke meja makan.</p>
+            <div class="project-card__tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">Sanity</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="link-arrow">Demo →</a>
+              <a href="#" class="link-arrow">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__img project-card__img--mint">
+            <span>🌿</span>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__cat">Mobile App</span>
+            <h3>Daun Harian</h3>
+            <p>Aplikasi journaling dengan tema alam — meditasi singkat tiap pagi.</p>
+            <div class="project-card__tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Firebase</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="link-arrow">Demo →</a>
+              <a href="#" class="link-arrow">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__img project-card__img--olive">
+            <span>🌻</span>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__cat">Landing Page</span>
+            <h3>Bunga Mekar</h3>
+            <p>Website resmi acara festival bunga tahunan — penuh warna dan cerita.</p>
+            <div class="project-card__tags">
+              <span class="tag">Astro</span>
+              <span class="tag">Tailwind</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="link-arrow">Demo →</a>
+              <a href="#" class="link-arrow">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== JURNAL / QUOTE ===== -->
+  <section class="section section--quote" id="journal">
+    <div class="container">
+      <div class="quote">
+        <span class="quote__leaf-l">🌿</span>
+        <span class="quote__leaf-r">🌿</span>
+        <p class="quote__text">
+          "Tumbuhlah perlahan, tapi pastikan kamu berakar dalam.
+          Sebab pohon yang besar pun bermula dari satu biji yang sabar."
+        </p>
+        <p class="quote__author">— catatan kebun pribadi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KONTAK ===== -->
+  <section class="section section--cream" id="contact">
+    <div class="container">
+      <p class="section__eyebrow">— Mari Berbincang —</p>
+      <h2 class="section__title">Tanam <em>Pesan</em> di Sini</h2>
+      <p class="section__sub">Ide, kolaborasi, atau sekadar sapa — semua disambut hangat.</p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">🌱 Nama</label>
+            <input type="text" id="name" name="name" placeholder="Siapa nama Anda?" required />
+          </div>
+          <div class="form-group">
+            <label for="email">📧 Email</label>
+            <input type="email" id="email" name="email" placeholder="email@contoh.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">🍃 Pesan</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda dengan tenang..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Kirim Pesan 🌿</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+
+      <div class="contact-socials">
+        <a href="https://github.com/username" target="_blank" rel="noopener">
+          <span>🐙</span> GitHub
+        </a>
+        <a href="https://linkedin.com/in/username" target="_blank" rel="noopener">
+          <span>💼</span> LinkedIn
+        </a>
+        <a href="https://instagram.com/username" target="_blank" rel="noopener">
+          <span>📷</span> Instagram
+        </a>
+        <a href="mailto:email@contoh.com">
+          <span>✉️</span> Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <svg class="footer__wave" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="#1a3d1a" d="M0,32L80,37.3C160,43,320,53,480,48C640,43,800,21,960,21.3C1120,21,1280,43,1360,53.3L1440,64L1440,80L0,80Z"/>
+    </svg>
+    <div class="footer__inner">
+      <div class="container">
+        <p class="footer__brand">🌿 HijauTumbuh</p>
+        <p>&copy; <span id="year"></span> Nama Anda. Ditanam dengan ❤️ di tanah Indonesia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
