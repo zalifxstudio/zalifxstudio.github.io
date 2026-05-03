@@ -3,243 +3,498 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Website pribadi bertema alam — tumbuh, hijau, dan tenang." />
-  <title>Nama Anda | Tumbuh Bersama Alam</title>
+  <meta name="description" content="Curriculum Vitae — perjalanan profesional di antara bintang." />
+  <title>[Nama Lengkap] — Curriculum Vitae | Cosmic Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Background ornaments -->
-  <div class="bg-leaves" aria-hidden="true">
-    <span class="leaf leaf--1">🍃</span>
-    <span class="leaf leaf--2">🌿</span>
-    <span class="leaf leaf--3">🍃</span>
-    <span class="leaf leaf--4">🌱</span>
-    <span class="leaf leaf--5">🌿</span>
+  <!-- ===== STAR FIELD BACKGROUND ===== -->
+  <div class="space-bg" aria-hidden="true">
+    <div class="stars stars--1"></div>
+    <div class="stars stars--2"></div>
+    <div class="stars stars--3"></div>
+    <div class="nebula nebula--1"></div>
+    <div class="nebula nebula--2"></div>
+    <div class="nebula nebula--3"></div>
+    <div class="shooting-star shooting-star--1"></div>
+    <div class="shooting-star shooting-star--2"></div>
+    <div class="shooting-star shooting-star--3"></div>
   </div>
 
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
       <a href="#home" class="navbar__logo">
-        <span class="navbar__logo-icon">🌿</span>
-        <span>Hijau<strong>Tumbuh</strong></span>
+        <span class="navbar__logo-orb">◉</span>
+        <span class="navbar__logo-text">COSMIC<span>.CV</span></span>
       </a>
-      <button class="navbar__toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <button class="navbar__toggle" id="menuToggle" aria-label="Toggle menu">≡</button>
       <nav class="navbar__links" id="navLinks">
-        <a href="#about">Tentang</a>
-        <a href="#skills">Keahlian</a>
-        <a href="#projects">Karya</a>
-        <a href="#journal">Jurnal</a>
-        <a href="#contact">Kontak</a>
+        <a href="#about">01 / About</a>
+        <a href="#experience">02 / Experience</a>
+        <a href="#education">03 / Education</a>
+        <a href="#skills">04 / Skills</a>
+        <a href="#projects">05 / Projects</a>
+        <a href="#certifications">06 / Awards</a>
+        <a href="#contact">07 / Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
-    <div class="hero__bg">
-      <div class="hero__sun"></div>
-      <svg class="hero__hills" viewBox="0 0 1440 320" preserveAspectRatio="none">
-        <path fill="#a7d4a4" fill-opacity=".5" d="M0,224L60,202.7C120,181,240,139,360,144C480,149,600,203,720,213.3C840,224,960,192,1080,170.7C1200,149,1320,139,1380,133.3L1440,128L1440,320L0,320Z"/>
-        <path fill="#7bbf78" fill-opacity=".7" d="M0,256L80,234.7C160,213,320,171,480,170.7C640,171,800,213,960,224C1120,235,1280,213,1360,202.7L1440,192L1440,320L0,320Z"/>
-        <path fill="#3f8a3a" d="M0,288L80,272C160,256,320,224,480,229.3C640,235,800,277,960,277.3C1120,277,1280,235,1360,213.3L1440,192L1440,320L0,320Z"/>
-      </svg>
+    <div class="hero__planet"></div>
+    <div class="hero__orbit hero__orbit--1">
+      <div class="hero__satellite"></div>
     </div>
+    <div class="hero__orbit hero__orbit--2">
+      <div class="hero__satellite hero__satellite--small"></div>
+    </div>
+    <div class="hero__orbit hero__orbit--3"></div>
 
     <div class="container hero__content">
-      <span class="hero__badge">🌱 Halo, salam hijau</span>
-      <h1 class="hero__name">Nama <em>Anda</em></h1>
-      <p class="hero__title">Tumbuh perlahan — seperti pohon, akarnya dalam.</p>
-      <p class="hero__desc">
-        Saya seorang pencipta digital yang terinspirasi dari alam: membangun web yang
-        sederhana, jujur, dan menyegarkan — sebagaimana embun pagi.
+      <div class="hero__signal">
+        <span class="hero__signal-dot"></span>
+        TRANSMISSION ACTIVE — SECTOR 7G
+      </div>
+      <p class="hero__greeting">// initiating biographical sequence</p>
+      <h1 class="hero__name">
+        <span class="hero__name-line">[NAMA</span>
+        <span class="hero__name-line hero__name-line--accent">LENGKAP]</span>
+      </h1>
+      <p class="hero__title">
+        <span class="hero__title-prefix">&gt;</span>
+        [Profesi / Job Title] <span class="hero__title-sep">×</span> [Spesialisasi]
       </p>
+      <p class="hero__desc">
+        [Tagline singkat tentang Anda — 1-2 kalimat. Contoh: "Mengubah kompleksitas
+        menjadi pengalaman yang elegan, satu baris kode pada satu waktu."]
+      </p>
+      <div class="hero__meta">
+        <span>📍 [Kota, Negara]</span>
+        <span>•</span>
+        <span>🎯 Available for hire</span>
+        <span>•</span>
+        <span>⚡ [Tahun]+ years experience</span>
+      </div>
       <div class="hero__actions">
-        <a href="#projects" class="btn btn--primary">Lihat Karya 🌾</a>
-        <a href="#contact" class="btn btn--outline">Sapa Saya</a>
+        <a href="#about" class="btn btn--primary">
+          <span>Launch Profile</span>
+          <span class="btn__icon">↗</span>
+        </a>
+        <a href="assets/cv.pdf" class="btn btn--ghost" download>
+          <span>Download CV</span>
+          <span class="btn__icon">⤓</span>
+        </a>
       </div>
     </div>
 
-    <a href="#about" class="hero__scroll" aria-label="Scroll ke bawah">
-      <span></span>
-    </a>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
   </section>
 
-  <!-- ===== TENTANG ===== -->
-  <section class="section section--cream" id="about">
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
     <div class="container">
-      <p class="section__eyebrow">— Tentang Saya —</p>
-      <h2 class="section__title">Akar yang Dalam, <em>Daun yang Lebar</em></h2>
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 class="section__title">About <em>The Voyager</em></h2>
+        <p class="section__sub">Sekilas tentang siapa di balik layar kendali</p>
+      </div>
 
       <div class="about__grid">
-        <div class="about__photo-wrap">
-          <div class="about__photo-frame">
-            <div class="about__photo-placeholder">🌳</div>
-            <div class="about__photo-deco about__photo-deco--1">🍃</div>
-            <div class="about__photo-deco about__photo-deco--2">🌿</div>
+        <div class="about__visual">
+          <div class="about__avatar">
+            <div class="about__avatar-ring"></div>
+            <div class="about__avatar-inner">
+              <span class="about__avatar-emoji">👨‍🚀</span>
+            </div>
+            <div class="about__avatar-orbit"></div>
+          </div>
+          <div class="about__info-card">
+            <ul class="info-list">
+              <li><span>Nama</span><strong>[Nama Lengkap]</strong></li>
+              <li><span>Lahir</span><strong>[DD MMM YYYY]</strong></li>
+              <li><span>Lokasi</span><strong>[Kota, Negara]</strong></li>
+              <li><span>Email</span><strong>[email@domain.com]</strong></li>
+              <li><span>Telepon</span><strong>[+62 xxx]</strong></li>
+              <li><span>Status</span><strong>[Available]</strong></li>
+              <li><span>Bahasa</span><strong>[ID, EN]</strong></li>
+            </ul>
           </div>
         </div>
 
-        <div class="about__text">
+        <div class="about__bio">
+          <h3 class="about__bio-title">Hello, traveler. <em>I'm [Nama].</em></h3>
           <p>
-            Saya percaya proses yang baik tumbuh dari kesabaran. Seperti pohon yang
-            tidak terburu-buru, namun pasti menjulang — saya menghadirkan karya digital
-            yang lahir dari ketelitian, keseimbangan, dan rasa.
+            [Paragraf 1 — perkenalan diri, latar belakang singkat, dan apa yang Anda
+            lakukan saat ini. Tulis dalam 3-4 kalimat yang mengalir.]
           </p>
           <p>
-            Berbasis di Indonesia, saya bekerja dengan klien yang peduli pada detail
-            dan keberlanjutan. Di luar layar, saya berkebun, mendaki, dan minum kopi
-            di teras pagi.
+            [Paragraf 2 — pendekatan kerja, nilai-nilai yang dipegang, atau filosofi
+            profesional. Bagian ini bersifat lebih personal.]
+          </p>
+          <p>
+            [Paragraf 3 — minat di luar pekerjaan, hobi, atau hal-hal yang membuat
+            Anda menarik sebagai manusia, bukan hanya profesional.]
           </p>
 
-          <div class="about__stats">
-            <div class="stat">
-              <span class="stat__num">5+</span>
-              <span class="stat__label">Tahun Pengalaman</span>
+          <div class="about__highlights">
+            <div class="highlight">
+              <span class="highlight__num">[10+]</span>
+              <span class="highlight__label">Tahun Pengalaman</span>
             </div>
-            <div class="stat">
-              <span class="stat__num">40+</span>
-              <span class="stat__label">Proyek Tumbuh</span>
+            <div class="highlight">
+              <span class="highlight__num">[50+]</span>
+              <span class="highlight__label">Proyek Selesai</span>
             </div>
-            <div class="stat">
-              <span class="stat__num">∞</span>
-              <span class="stat__label">Cinta pada Alam</span>
+            <div class="highlight">
+              <span class="highlight__num">[20+]</span>
+              <span class="highlight__label">Klien Bahagia</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight__num">[5+]</span>
+              <span class="highlight__label">Penghargaan</span>
             </div>
           </div>
-
-          <a href="assets/cv.pdf" class="btn btn--primary" download>📄 Unduh CV</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== KEAHLIAN ===== -->
-  <section class="section section--forest" id="skills">
+  <!-- ===== EXPERIENCE TIMELINE ===== -->
+  <section class="section" id="experience">
     <div class="container">
-      <p class="section__eyebrow section__eyebrow--light">— Yang Saya Tanam —</p>
-      <h2 class="section__title section__title--light">Keahlian <em>yang Tumbuh</em></h2>
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 class="section__title">Mission <em>Log</em></h2>
+        <p class="section__sub">Riwayat misi profesional dari masa ke masa</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__line"></div>
+
+        <article class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2023 — Sekarang</div>
+          <div class="timeline__card">
+            <span class="timeline__tag">CURRENT MISSION</span>
+            <h3>[Job Title Saat Ini]</h3>
+            <p class="timeline__company">🛰️ [Nama Perusahaan] — [Kota / Remote]</p>
+            <p class="timeline__desc">
+              [Deskripsi singkat peran dan tanggung jawab utama Anda di posisi ini.
+              Tulis dalam 2-3 kalimat yang menggambarkan lingkup pekerjaan.]
+            </p>
+            <ul class="timeline__list">
+              <li>[Pencapaian / kontribusi konkret #1 — gunakan angka jika bisa]</li>
+              <li>[Pencapaian / kontribusi konkret #2]</li>
+              <li>[Pencapaian / kontribusi konkret #3]</li>
+            </ul>
+            <div class="timeline__stack">
+              <span class="chip">[Tech 1]</span>
+              <span class="chip">[Tech 2]</span>
+              <span class="chip">[Tech 3]</span>
+              <span class="chip">[Tech 4]</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2020 — 2023</div>
+          <div class="timeline__card">
+            <h3>[Job Title Sebelumnya]</h3>
+            <p class="timeline__company">🚀 [Nama Perusahaan] — [Kota]</p>
+            <p class="timeline__desc">
+              [Deskripsi peran dan kontribusi utama selama periode ini.]
+            </p>
+            <ul class="timeline__list">
+              <li>[Pencapaian #1]</li>
+              <li>[Pencapaian #2]</li>
+              <li>[Pencapaian #3]</li>
+            </ul>
+            <div class="timeline__stack">
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2018 — 2020</div>
+          <div class="timeline__card">
+            <h3>[Job Title Lebih Awal]</h3>
+            <p class="timeline__company">🌌 [Nama Perusahaan] — [Kota]</p>
+            <p class="timeline__desc">
+              [Deskripsi singkat peran ini — fokus pada pembelajaran dan kontribusi awal karier.]
+            </p>
+            <ul class="timeline__list">
+              <li>[Pencapaian #1]</li>
+              <li>[Pencapaian #2]</li>
+            </ul>
+            <div class="timeline__stack">
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2016 — 2018</div>
+          <div class="timeline__card">
+            <h3>[Posisi Junior / Internship]</h3>
+            <p class="timeline__company">⭐ [Nama Perusahaan] — [Kota]</p>
+            <p class="timeline__desc">
+              [Pengalaman pertama di dunia profesional — apa yang Anda pelajari dan capai.]
+            </p>
+            <div class="timeline__stack">
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2 class="section__title">Knowledge <em>Galaxy</em></h2>
+        <p class="section__sub">Pendidikan formal dan pelatihan terstruktur</p>
+      </div>
+
+      <div class="edu__grid">
+        <div class="edu-card">
+          <div class="edu-card__icon">🎓</div>
+          <span class="edu-card__period">2014 — 2018</span>
+          <h3>[Gelar — S1/S2]</h3>
+          <p class="edu-card__inst">[Nama Universitas]</p>
+          <p class="edu-card__desc">
+            [Jurusan / Program Studi]. IPK: [3.xx/4.00].
+            [Kegiatan / pencapaian akademik penting.]
+          </p>
+          <div class="edu-card__tags">
+            <span class="chip">Cum Laude</span>
+            <span class="chip">Best Thesis</span>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-card__icon">📚</div>
+          <span class="edu-card__period">2011 — 2014</span>
+          <h3>[Sekolah Menengah Atas]</h3>
+          <p class="edu-card__inst">[Nama Sekolah]</p>
+          <p class="edu-card__desc">
+            [Jurusan IPA/IPS/Bahasa]. [Pencapaian / aktivitas penting.]
+          </p>
+          <div class="edu-card__tags">
+            <span class="chip">[Prestasi]</span>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-card__icon">🛸</div>
+          <span class="edu-card__period">2020 — 2021</span>
+          <h3>[Bootcamp / Course Lanjutan]</h3>
+          <p class="edu-card__inst">[Nama Penyelenggara]</p>
+          <p class="edu-card__desc">
+            [Program pelatihan intensif yang Anda ikuti — apa yang dipelajari.]
+          </p>
+          <div class="edu-card__tags">
+            <span class="chip">Top Graduate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2 class="section__title">Power <em>Core</em></h2>
+        <p class="section__sub">Senjata, alat, dan kemampuan yang menggerakkan misi</p>
+      </div>
 
       <div class="skills__grid">
-        <div class="skill-card">
-          <div class="skill-card__icon">🌱</div>
-          <h3>Frontend</h3>
-          <p>HTML, CSS, JavaScript — fondasi yang kokoh seperti akar.</p>
+        <div class="skill-block">
+          <div class="skill-block__head">
+            <span class="skill-block__icon">⚡</span>
+            <h3>Technical Stack</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="bar"><div class="bar__head"><span>[Skill 1]</span><span>95%</span></div><div class="bar__track"><div class="bar__fill" style="--w:95%"></div></div></div>
+            <div class="bar"><div class="bar__head"><span>[Skill 2]</span><span>90%</span></div><div class="bar__track"><div class="bar__fill" style="--w:90%"></div></div></div>
+            <div class="bar"><div class="bar__head"><span>[Skill 3]</span><span>85%</span></div><div class="bar__track"><div class="bar__fill" style="--w:85%"></div></div></div>
+            <div class="bar"><div class="bar__head"><span>[Skill 4]</span><span>80%</span></div><div class="bar__track"><div class="bar__fill" style="--w:80%"></div></div></div>
+            <div class="bar"><div class="bar__head"><span>[Skill 5]</span><span>75%</span></div><div class="bar__track"><div class="bar__fill" style="--w:75%"></div></div></div>
+          </div>
         </div>
-        <div class="skill-card">
-          <div class="skill-card__icon">🌿</div>
-          <h3>React &amp; Vue</h3>
-          <p>Komponen yang bercabang rapi, mudah dirawat dan diperbesar.</p>
+
+        <div class="skill-block">
+          <div class="skill-block__head">
+            <span class="skill-block__icon">🧠</span>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="bar"><div class="bar__head"><span>Communication</span><span>92%</span></div><div class="bar__track"><div class="bar__fill" style="--w:92%"></div></div></div>
+            <div class="bar"><div class="bar__head"><span>Leadership</span><span>88%</span></div><div class="bar__track"><div class="bar__fill" style="--w:88%"></div></div></div>
+            <div class="bar"><div class="bar__head"><span>Problem Solving</span><span>95%</span></div><div class="bar__track"><div class="bar__fill" style="--w:95%"></div></div></div>
+            <div class="bar"><div class="bar__head"><span>Team Collaboration</span><span>90%</span></div><div class="bar__track"><div class="bar__fill" style="--w:90%"></div></div></div>
+            <div class="bar"><div class="bar__head"><span>Adaptability</span><span>85%</span></div><div class="bar__track"><div class="bar__fill" style="--w:85%"></div></div></div>
+          </div>
         </div>
-        <div class="skill-card">
-          <div class="skill-card__icon">🌳</div>
-          <h3>Node.js</h3>
-          <p>Backend yang menopang — kuat dan tahan terhadap musim apa pun.</p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card__icon">🍃</div>
-          <h3>UI/UX Design</h3>
-          <p>Desain yang menyatu seperti daun di angin — alami dan ringan.</p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card__icon">🌾</div>
-          <h3>Responsive</h3>
-          <p>Tumbuh menyesuaikan layar, dari ladang lebar hingga ponsel kecil.</p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card__icon">🌻</div>
-          <h3>Performance</h3>
-          <p>Cepat seperti embun yang menguap — ringan dan hemat sumber daya.</p>
+
+        <div class="skill-block skill-block--full">
+          <div class="skill-block__head">
+            <span class="skill-block__icon">🛠️</span>
+            <h3>Tools & Technologies</h3>
+          </div>
+          <div class="skill-cloud">
+            <span class="cloud-tag cloud-tag--xl">[Main Tool]</span>
+            <span class="cloud-tag cloud-tag--lg">[Tool 2]</span>
+            <span class="cloud-tag cloud-tag--lg">[Tool 3]</span>
+            <span class="cloud-tag">[Tool 4]</span>
+            <span class="cloud-tag">[Tool 5]</span>
+            <span class="cloud-tag cloud-tag--md">[Tool 6]</span>
+            <span class="cloud-tag">[Tool 7]</span>
+            <span class="cloud-tag cloud-tag--md">[Tool 8]</span>
+            <span class="cloud-tag">[Tool 9]</span>
+            <span class="cloud-tag cloud-tag--lg">[Tool 10]</span>
+            <span class="cloud-tag">[Tool 11]</span>
+            <span class="cloud-tag cloud-tag--md">[Tool 12]</span>
+            <span class="cloud-tag">[Tool 13]</span>
+            <span class="cloud-tag">[Tool 14]</span>
+            <span class="cloud-tag cloud-tag--md">[Tool 15]</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROYEK ===== -->
-  <section class="section section--cream" id="projects">
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
     <div class="container">
-      <p class="section__eyebrow">— Karya Tangan —</p>
-      <h2 class="section__title">Kebun <em>Proyek</em></h2>
+      <div class="section__head">
+        <span class="section__num">05</span>
+        <h2 class="section__title">Featured <em>Expeditions</em></h2>
+        <p class="section__sub">Proyek-proyek paling berkesan dari arsip pribadi</p>
+      </div>
 
       <div class="projects__grid">
 
-        <article class="project-card">
-          <div class="project-card__img project-card__img--moss">
-            <span>🌲</span>
+        <article class="project-card project-card--featured">
+          <div class="project-card__visual">
+            <div class="project-card__planet"></div>
+            <span class="project-card__emoji">🌌</span>
           </div>
           <div class="project-card__body">
-            <span class="project-card__cat">Aplikasi Web</span>
-            <h3>Hutan Digital</h3>
-            <p>Platform edukasi konservasi hutan dengan peta interaktif dan cerita warga.</p>
-            <div class="project-card__tags">
-              <span class="tag">React</span>
-              <span class="tag">Mapbox</span>
-              <span class="tag">Node</span>
+            <span class="project-card__year">2024 • FLAGSHIP</span>
+            <h3>[Nama Proyek Andalan]</h3>
+            <p>
+              [Deskripsi proyek dalam 2-3 kalimat — masalah yang dipecahkan,
+              pendekatan yang diambil, dan dampaknya.]
+            </p>
+            <div class="project-card__metrics">
+              <div><strong>[10K+]</strong><span>Users</span></div>
+              <div><strong>[99.9%]</strong><span>Uptime</span></div>
+              <div><strong>[40%]</strong><span>Faster</span></div>
+            </div>
+            <div class="project-card__stack">
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
             </div>
             <div class="project-card__links">
-              <a href="#" class="link-arrow">Demo →</a>
-              <a href="#" class="link-arrow">GitHub →</a>
+              <a href="#" class="btn btn--small btn--primary">Live Site ↗</a>
+              <a href="#" class="btn btn--small btn--ghost">Source Code</a>
             </div>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="project-card__img project-card__img--leaf">
-            <span>🌾</span>
+          <div class="project-card__visual project-card__visual--alt1">
+            <span class="project-card__emoji">🪐</span>
           </div>
           <div class="project-card__body">
-            <span class="project-card__cat">E-Commerce</span>
-            <h3>Tani Tumbuh</h3>
-            <p>Toko hasil bumi dari petani lokal — dari ladang langsung ke meja makan.</p>
-            <div class="project-card__tags">
-              <span class="tag">Next.js</span>
-              <span class="tag">Stripe</span>
-              <span class="tag">Sanity</span>
+            <span class="project-card__year">2023</span>
+            <h3>[Nama Proyek 2]</h3>
+            <p>[Deskripsi singkat proyek ini.]</p>
+            <div class="project-card__stack">
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
             </div>
             <div class="project-card__links">
-              <a href="#" class="link-arrow">Demo →</a>
-              <a href="#" class="link-arrow">GitHub →</a>
+              <a href="#" class="link-arrow">View Project →</a>
             </div>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="project-card__img project-card__img--mint">
-            <span>🌿</span>
+          <div class="project-card__visual project-card__visual--alt2">
+            <span class="project-card__emoji">☄️</span>
           </div>
           <div class="project-card__body">
-            <span class="project-card__cat">Mobile App</span>
-            <h3>Daun Harian</h3>
-            <p>Aplikasi journaling dengan tema alam — meditasi singkat tiap pagi.</p>
-            <div class="project-card__tags">
-              <span class="tag">React Native</span>
-              <span class="tag">Firebase</span>
+            <span class="project-card__year">2023</span>
+            <h3>[Nama Proyek 3]</h3>
+            <p>[Deskripsi singkat proyek ini.]</p>
+            <div class="project-card__stack">
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
             </div>
             <div class="project-card__links">
-              <a href="#" class="link-arrow">Demo →</a>
-              <a href="#" class="link-arrow">GitHub →</a>
+              <a href="#" class="link-arrow">View Project →</a>
             </div>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="project-card__img project-card__img--olive">
-            <span>🌻</span>
+          <div class="project-card__visual project-card__visual--alt3">
+            <span class="project-card__emoji">🛰️</span>
           </div>
           <div class="project-card__body">
-            <span class="project-card__cat">Landing Page</span>
-            <h3>Bunga Mekar</h3>
-            <p>Website resmi acara festival bunga tahunan — penuh warna dan cerita.</p>
-            <div class="project-card__tags">
-              <span class="tag">Astro</span>
-              <span class="tag">Tailwind</span>
+            <span class="project-card__year">2022</span>
+            <h3>[Nama Proyek 4]</h3>
+            <p>[Deskripsi singkat proyek ini.]</p>
+            <div class="project-card__stack">
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
             </div>
             <div class="project-card__links">
-              <a href="#" class="link-arrow">Demo →</a>
-              <a href="#" class="link-arrow">GitHub →</a>
+              <a href="#" class="link-arrow">View Project →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__visual project-card__visual--alt4">
+            <span class="project-card__emoji">🌠</span>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__year">2022</span>
+            <h3>[Nama Proyek 5]</h3>
+            <p>[Deskripsi singkat proyek ini.]</p>
+            <div class="project-card__stack">
+              <span class="chip">[Tech]</span>
+              <span class="chip">[Tech]</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="link-arrow">View Project →</a>
             </div>
           </div>
         </article>
@@ -248,74 +503,152 @@
     </div>
   </section>
 
-  <!-- ===== JURNAL / QUOTE ===== -->
-  <section class="section section--quote" id="journal">
+  <!-- ===== CERTIFICATIONS / AWARDS ===== -->
+  <section class="section" id="certifications">
     <div class="container">
-      <div class="quote">
-        <span class="quote__leaf-l">🌿</span>
-        <span class="quote__leaf-r">🌿</span>
-        <p class="quote__text">
-          "Tumbuhlah perlahan, tapi pastikan kamu berakar dalam.
-          Sebab pohon yang besar pun bermula dari satu biji yang sabar."
-        </p>
-        <p class="quote__author">— catatan kebun pribadi</p>
+      <div class="section__head">
+        <span class="section__num">06</span>
+        <h2 class="section__title">Constellation of <em>Honors</em></h2>
+        <p class="section__sub">Sertifikasi, penghargaan, dan pengakuan</p>
+      </div>
+
+      <div class="awards__grid">
+        <div class="award-card">
+          <div class="award-card__medal">🏆</div>
+          <span class="award-card__year">2024</span>
+          <h3>[Nama Penghargaan]</h3>
+          <p class="award-card__by">[Pemberi Penghargaan]</p>
+          <p>[Deskripsi singkat tentang penghargaan ini.]</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-card__medal">🥇</div>
+          <span class="award-card__year">2023</span>
+          <h3>[Nama Sertifikasi]</h3>
+          <p class="award-card__by">[Lembaga Penerbit]</p>
+          <p>[Detail sertifikasi — level, ID, periode berlaku.]</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-card__medal">🌟</div>
+          <span class="award-card__year">2023</span>
+          <h3>[Nama Award]</h3>
+          <p class="award-card__by">[Organisasi]</p>
+          <p>[Konteks penghargaan ini diberikan.]</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-card__medal">💫</div>
+          <span class="award-card__year">2022</span>
+          <h3>[Sertifikasi Profesional]</h3>
+          <p class="award-card__by">[Penerbit]</p>
+          <p>[Detail singkat sertifikasi.]</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-card__medal">⭐</div>
+          <span class="award-card__year">2022</span>
+          <h3>[Speaker / Publication]</h3>
+          <p class="award-card__by">[Acara / Media]</p>
+          <p>[Topik atau judul yang dibahas.]</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-card__medal">🎖️</div>
+          <span class="award-card__year">2021</span>
+          <h3>[Nama Penghargaan]</h3>
+          <p class="award-card__by">[Organisasi]</p>
+          <p>[Konteks penghargaan ini.]</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== KONTAK ===== -->
-  <section class="section section--cream" id="contact">
+  <!-- ===== CONTACT ===== -->
+  <section class="section section--contact" id="contact">
     <div class="container">
-      <p class="section__eyebrow">— Mari Berbincang —</p>
-      <h2 class="section__title">Tanam <em>Pesan</em> di Sini</h2>
-      <p class="section__sub">Ide, kolaborasi, atau sekadar sapa — semua disambut hangat.</p>
+      <div class="section__head">
+        <span class="section__num">07</span>
+        <h2 class="section__title">Open <em>Channel</em></h2>
+        <p class="section__sub">Kirim sinyal — saya akan menjawab dari ujung galaksi</p>
+      </div>
 
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">🌱 Nama</label>
-            <input type="text" id="name" name="name" placeholder="Siapa nama Anda?" required />
-          </div>
-          <div class="form-group">
-            <label for="email">📧 Email</label>
-            <input type="email" id="email" name="email" placeholder="email@contoh.com" required />
+      <div class="contact__grid">
+        <div class="contact__info">
+          <h3>Let's build something <em>stellar.</em></h3>
+          <p>
+            Punya ide proyek, peluang kerja, atau sekadar ingin berbincang tentang
+            teknologi dan luar angkasa? Saluran komunikasi selalu terbuka.
+          </p>
+
+          <div class="contact__channels">
+            <a href="mailto:[email@domain.com]" class="channel">
+              <span class="channel__icon">📧</span>
+              <div>
+                <strong>Email</strong>
+                <span>[email@domain.com]</span>
+              </div>
+            </a>
+            <a href="tel:[+62xxx]" class="channel">
+              <span class="channel__icon">📱</span>
+              <div>
+                <strong>Phone / WhatsApp</strong>
+                <span>[+62 xxx-xxxx-xxxx]</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/[username]" target="_blank" rel="noopener" class="channel">
+              <span class="channel__icon">💼</span>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>linkedin.com/in/[username]</span>
+              </div>
+            </a>
+            <a href="https://github.com/[username]" target="_blank" rel="noopener" class="channel">
+              <span class="channel__icon">🐙</span>
+              <div>
+                <strong>GitHub</strong>
+                <span>github.com/[username]</span>
+              </div>
+            </a>
           </div>
         </div>
-        <div class="form-group">
-          <label for="message">🍃 Pesan</label>
-          <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda dengan tenang..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full">Kirim Pesan 🌿</button>
-        <p class="form-note" id="formNote"></p>
-      </form>
 
-      <div class="contact-socials">
-        <a href="https://github.com/username" target="_blank" rel="noopener">
-          <span>🐙</span> GitHub
-        </a>
-        <a href="https://linkedin.com/in/username" target="_blank" rel="noopener">
-          <span>💼</span> LinkedIn
-        </a>
-        <a href="https://instagram.com/username" target="_blank" rel="noopener">
-          <span>📷</span> Instagram
-        </a>
-        <a href="mailto:email@contoh.com">
-          <span>✉️</span> Email
-        </a>
+        <form class="contact__form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Identifier</label>
+            <input type="text" id="name" name="name" placeholder="Nama Anda" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Comm Frequency</label>
+            <input type="email" id="email" name="email" placeholder="email@anda.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Mission Type</label>
+            <input type="text" id="subject" name="subject" placeholder="Subjek pesan" />
+          </div>
+          <div class="form-group">
+            <label for="message">Transmission</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <span>Transmit Signal</span>
+            <span class="btn__icon">↗</span>
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <svg class="footer__wave" viewBox="0 0 1440 80" preserveAspectRatio="none">
-      <path fill="#1a3d1a" d="M0,32L80,37.3C160,43,320,53,480,48C640,43,800,21,960,21.3C1120,21,1280,43,1360,53.3L1440,64L1440,80L0,80Z"/>
-    </svg>
-    <div class="footer__inner">
-      <div class="container">
-        <p class="footer__brand">🌿 HijauTumbuh</p>
-        <p>&copy; <span id="year"></span> Nama Anda. Ditanam dengan ❤️ di tanah Indonesia.</p>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="navbar__logo-orb">◉</span>
+        <span class="navbar__logo-text">COSMIC<span>.CV</span></span>
       </div>
+      <p class="footer__tagline">Built among the stars — © <span id="year"></span> [Nama Lengkap]</p>
+      <p class="footer__small">"The cosmos is within us. We are made of star-stuff."</p>
     </div>
   </footer>
 

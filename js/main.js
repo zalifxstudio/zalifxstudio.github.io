@@ -1,3 +1,40 @@
+// ===== GENERATE STAR FIELD =====
+function generateStars(layer, count, size) {
+  const shadows = [];
+  for (let i = 0; i < count; i++) {
+    const x = Math.floor(Math.random() * 2000);
+    const y = Math.floor(Math.random() * 2000);
+    shadows.push(`${x}px ${y}px #fff`);
+  }
+  layer.style.boxShadow = shadows.join(',');
+  layer.style.width = size + 'px';
+  layer.style.height = size + 'px';
+}
+
+const star1 = document.querySelector('.stars--1');
+const star2 = document.querySelector('.stars--2');
+const star3 = document.querySelector('.stars--3');
+if (star1 && star2 && star3) {
+  generateStars(star1, 200, 1);
+  generateStars(star2, 100, 2);
+  generateStars(star3, 50, 3);
+
+  // Apply same shadow to ::before via style injection
+  const style = document.createElement('style');
+  style.textContent = `
+    .stars--1::before { box-shadow: ${star1.style.boxShadow}; width: 1px; height: 1px; }
+    .stars--2::before { box-shadow: ${star2.style.boxShadow}; width: 2px; height: 2px; }
+    .stars--3::before { box-shadow: ${star3.style.boxShadow}; width: 3px; height: 3px; }
+    .stars--1, .stars--2, .stars--3 { background: transparent; }
+  `;
+  document.head.appendChild(style);
+
+  // Apply via box-shadow directly on the layer instead
+  star1.style.background = 'transparent';
+  star2.style.background = 'transparent';
+  star3.style.background = 'transparent';
+}
+
 // ===== NAVBAR: shadow on scroll =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -15,20 +52,19 @@ navLinks.querySelectorAll('a').forEach(link => {
 // ===== FOOTER YEAR =====
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ===== CONTACT FORM (Formspree-ready) =====
+// ===== CONTACT FORM =====
 const form     = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = form.querySelector('button[type=submit]');
-  const originalText = btn.textContent;
+  const original = btn.innerHTML;
   btn.disabled = true;
-  btn.textContent = 'Mengirim... 🌱';
+  btn.innerHTML = '<span>TRANSMITTING...</span>';
   formNote.textContent = '';
   formNote.className = 'form-note';
 
-  // Ganti dengan endpoint Formspree Anda: https://formspree.io/f/XXXXXXXX
   const FORMSPREE_URL = 'https://formspree.io/f/GANTI_DENGAN_ID_ANDA';
 
   try {
@@ -38,30 +74,28 @@ form.addEventListener('submit', async (e) => {
       body: JSON.stringify(Object.fromEntries(new FormData(form))),
     });
     if (res.ok) {
-      formNote.textContent = '🌿 Pesan berhasil ditanam! Saya akan membalas segera.';
+      formNote.textContent = '✦ Signal received. Response inbound from sector 7G.';
       formNote.classList.add('success');
       form.reset();
-    } else {
-      throw new Error();
-    }
+    } else throw new Error();
   } catch {
-    formNote.textContent = '🍂 Gagal mengirim. Coba lagi atau hubungi via email.';
+    formNote.textContent = '⚠ Transmission failed. Try again or use direct channel.';
     formNote.classList.add('error');
   }
 
   btn.disabled = false;
-  btn.textContent = originalText;
+  btn.innerHTML = original;
 });
 
-// ===== SCROLL REVEAL (ringan, tanpa library) =====
+// ===== SCROLL REVEAL =====
 const revealEls = document.querySelectorAll(
-  '.skill-card, .project-card, .about__photo-wrap, .about__text, .quote, .contact-form, .contact-socials'
+  '.timeline__item, .edu-card, .skill-block, .project-card, .award-card, .channel, .contact__form, .about__visual, .about__bio'
 );
 
 revealEls.forEach((el, i) => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(28px)';
-  el.style.transition = `opacity .7s ease ${i * 60}ms, transform .7s ease ${i * 60}ms`;
+  el.style.transform = 'translateY(30px)';
+  el.style.transition = `opacity .8s ease ${(i % 6) * 80}ms, transform .8s ease ${(i % 6) * 80}ms`;
 });
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -72,16 +106,47 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
 revealEls.forEach(el => revealObserver.observe(el));
 
-// ===== PARALLAX RINGAN UNTUK DAUN BACKGROUND =====
-const leaves = document.querySelectorAll('.leaf');
-window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  leaves.forEach((leaf, i) => {
-    const speed = 0.05 + (i % 3) * 0.04;
-    leaf.style.transform = `translateY(${y * speed}px)`;
+// ===== SKILL BAR ANIMATION =====
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      barObserver.unobserve(entry.target);
+    }
   });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.bar').forEach(bar => barObserver.observe(bar));
+
+// ===== PARALLAX HERO PLANET =====
+const heroPlanet = document.querySelector('.hero__planet');
+window.addEventListener('scroll', () => {
+  if (heroPlanet && window.scrollY < window.innerHeight) {
+    const y = window.scrollY * 0.3;
+    heroPlanet.style.transform = `translateY(${y}px) rotate(${window.scrollY * 0.1}deg)`;
+  }
 }, { passive: true });
+
+// ===== CURSOR GLOW (desktop only) =====
+if (window.matchMedia('(pointer: fine)').matches) {
+  const glow = document.createElement('div');
+  glow.style.cssText = `
+    position: fixed; pointer-events: none; z-index: 9999;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(0,240,255,.08) 0%, transparent 60%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .3s ease;
+    mix-blend-mode: screen;
+  `;
+  document.body.appendChild(glow);
+
+  document.addEventListener('mousemove', (e) => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+  });
+}
