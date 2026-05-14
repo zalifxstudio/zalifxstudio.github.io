@@ -1,60 +1,71 @@
-# My Personal Website
+# zalifxstudio — Personal Portfolio & Developer Website
 
-Template website portofolio pribadi — siap deploy ke GitHub Pages.
+**Live site:** https://zalifxstudio.github.io
 
-## Struktur File
-
-```
-my-website/
-├── index.html        # Halaman utama
-├── css/
-│   └── style.css     # Semua styling
-├── js/
-│   └── main.js       # Interaktivitas
-├── assets/
-│   └── cv.pdf        # (opsional) file CV Anda
-└── README.md
-```
-
-## Cara Deploy ke GitHub Pages
-
-### Langkah 1 — Buat repo di GitHub
-1. Buka https://github.com/new
-2. Nama repo: `username.github.io` (ganti `username` dengan username GitHub Anda)
-3. Set **Public**, klik **Create repository**
-
-### Langkah 2 — Upload file
-```bash
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/username/username.github.io.git
-git push -u origin main
-```
-
-### Langkah 3 — Aktifkan GitHub Pages
-1. Buka repo > **Settings** > **Pages**
-2. Source: **Deploy from a branch** → branch `main`, folder `/ (root)`
-3. Klik **Save**
-
-Website Anda akan live di: `https://username.github.io`
+Portfolio website resmi **Imam Alif Firmansyah** (zalifxstudio) — developer & graphic designer dari Ciamis, Jawa Barat, Indonesia.
 
 ---
 
-## Kustomisasi
+## Tentang
 
-| Yang perlu diubah | Lokasi |
-|---|---|
-| Nama, jabatan, deskripsi | `index.html` — section Hero |
-| Foto profil | Ganti `📸` dengan tag `<img>` |
-| Keahlian | `index.html` — section Skills |
-| Proyek | `index.html` — section Projects |
-| Link sosial (GitHub, LinkedIn) | `index.html` — section Contact & footer |
-| Warna utama | `css/style.css` — variabel `--clr-primary` |
-| Form kontak | Daftar di https://formspree.io lalu ganti URL di `js/main.js` |
+Website ini adalah portofolio pribadi yang menampilkan profil, keahlian, dan proyek-proyek yang telah dibangun oleh zalifxstudio. Saya seorang concept-driven builder yang menggabungkan kemampuan desain grafis (5+ tahun Adobe Illustrator) dengan AI-assisted development untuk menciptakan produk digital yang nyata.
 
-## Form Kontak (Formspree)
-1. Daftar gratis di https://formspree.io
-2. Buat form baru → salin endpoint URL (`https://formspree.io/f/xxxxxxxx`)
-3. Ganti `GANTI_DENGAN_ID_ANDA` di `js/main.js` dengan ID tersebut
+> "Saya berpikir dalam konsep, lalu AI yang menulis kodenya. 90% Claude Code, 10% saya yang mengarahkan."
+
+---
+
+## Aplikasi & Proyek
+
+### PintarQuiz — Kuis SD & SMP
+Game kuis edukasi Android untuk pelajar SD dan SMP. Dirancang untuk pengalaman belajar yang menyenangkan dengan tampilan modern, sistem skor, dan kategori soal yang variatif.
+
+- **Platform:** Android (Google Play Store)
+- **Package ID:** `com.zalifxstudio.pintarquiz`
+- **Teknologi:** Flutter · Dart
+- **Link:** https://play.google.com/store/apps/details?id=com.zalifxstudio.pintarquiz
+
+### Donghua 3D Quiz
+Game Android kuis bertema Donghua (animasi China 3D). Tantang pengetahuan tentang karakter, cerita, dan dunia Donghua dalam format kuis interaktif.
+
+- **Platform:** Android (Google Play Store)
+- **Teknologi:** Flutter · Dart
+
+### SISUKAMU
+Sistem Informasi Surat Keluar Masuk untuk SMP Negeri 3 Baregbeg. Membantu administrasi sekolah mengelola surat masuk dan keluar secara digital, terintegrasi dengan Google Sheets sebagai database.
+
+- **Teknologi:** React · Vite · TailwindCSS · Google Sheets API
+
+### Absensi Wartawan
+Web app absensi untuk wartawan. Sistem pencatatan kehadiran yang simpel, cepat, dan bisa langsung digunakan di browser tanpa instalasi.
+
+- **Teknologi:** HTML · CSS · JavaScript
+
+---
+
+## Keahlian
+
+- **Graphic Design** — Adobe Illustrator, visual storytelling, brand identity (5+ tahun)
+- **AI-Assisted Development** — Claude Code, prompt engineering, Flutter, React
+- **Concept & Strategy** — ideation, product thinking, user flows, wireframing
+- **Problem Solving** — debugging, root cause analysis, software logic
+
+---
+
+## Kontak & Tautan
+
+- **GitHub:** https://github.com/zalifxstudio
+- **Lokasi:** Jelat, Ciamis, Jawa Barat, Indonesia
+- **Website:** https://zalifxstudio.github.io
+
+---
+
+## Struktur Repo
+
+```
+zalifxstudio.github.io/
+├── index.html       # Halaman utama portfolio
+├── app-ads.txt      # Authorized sellers file (Google AdMob)
+├── robots.txt       # Crawler directives
+├── sitemap.xml      # Site map for search engines
+└── README.md
+```
