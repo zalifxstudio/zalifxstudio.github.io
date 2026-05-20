@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.zalifxstudio.donghua3dquiz",
+      "sha256_cert_fingerprints": [
+        "78:36:B7:01:4D:27:F4:E1:0A:9B:6D:E3:9C:28:4F:6E:FC:8C:DE:CF:34:ED:4D:C3:EC:7B:FB:20:47:FA:B1:C8"
+      ]
+    }
+  }
+]
