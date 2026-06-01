@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kebijakan Privasi — ShalatKu</title>
+  <style>
+    :root {
+      --navy: #1A4A6B;
+      --navy-dark: #0F2D45;
+      --teal: #4DD0E1;
+      --bg: #F8F9FA;
+      --card: #FFFFFF;
+      --text: #1A2332;
+      --text2: #4A5568;
+      --border: #E2E8F0;
+      --accent: #0F2D45;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, var(--navy), var(--navy-dark));
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    header .logo {
+      width: 64px; height: 64px;
+      background: rgba(77,208,225,0.2);
+      border: 2px solid var(--teal);
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+    header p { color: rgba(255,255,255,0.75); font-size: 14px; }
+    header .badge {
+      display: inline-block;
+      background: rgba(77,208,225,0.2);
+      border: 1px solid var(--teal);
+      color: var(--teal);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .update-bar {
+      background: #EBF8FF;
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--text2);
+      margin-bottom: 32px;
+    }
+    .update-bar strong { color: var(--navy); }
+    section {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    section h2 .icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-dark));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    p { color: var(--text2); font-size: 14.5px; margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+    ul { color: var(--text2); font-size: 14.5px; padding-left: 20px; }
+    ul li { margin-bottom: 6px; }
+    .table-wrap { overflow-x: auto; margin-top: 12px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    th {
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text2);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #F7FAFC; }
+    .highlight {
+      background: #F0FFF4;
+      border: 1px solid #9AE6B4;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13.5px;
+      color: #276749;
+      margin-top: 12px;
+    }
+    .warning {
+      background: #FFFBEB;
+      border: 1px solid #F6E05E;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13.5px;
+      color: #744210;
+      margin-top: 12px;
+    }
+    a { color: var(--navy); }
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--text2);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+    footer strong { color: var(--navy); }
+    @media (max-width: 480px) {
+      header h1 { font-size: 22px; }
+      .container { padding: 24px 16px 60px; }
+      section { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🕌</div>
+  <h1>Kebijakan Privasi</h1>
+  <p>ShalatKu — Teman Ibadah Harian Anda</p>
+  <span class="badge">com.zalifxstudio.shalatku</span>
+</header>
+
+<div class="container">
+
+  <div class="update-bar">
+    <strong>Terakhir diperbarui:</strong> 1 Juni 2026 &nbsp;·&nbsp;
+    Berlaku untuk ShalatKu versi 1.0.0 ke atas
+  </div>
+
+  <!-- 1. Pengantar -->
+  <section>
+    <h2><span class="icon">📋</span> 1. Pengantar</h2>
+    <p>
+      Kebijakan Privasi ini menjelaskan bagaimana <strong>zalifxstudio</strong> (dikembangkan oleh
+      <strong>Imam Alif Firmansyah</strong>) mengumpulkan, menggunakan, dan melindungi informasi
+      Anda saat menggunakan aplikasi <strong>ShalatKu</strong> di perangkat Android.
+    </p>
+    <p>
+      Dengan menggunakan ShalatKu, Anda menyetujui praktik yang dijelaskan dalam kebijakan ini.
+      Jika Anda tidak setuju, harap hentikan penggunaan aplikasi.
+    </p>
+    <div class="highlight">
+      ✅ ShalatKu <strong>tidak menjual data Anda</strong> kepada pihak ketiga manapun.
+      Data hanya digunakan untuk menjalankan fitur aplikasi.
+    </div>
+  </section>
+
+  <!-- 2. Data yang Dikumpulkan -->
+  <section>
+    <h2><span class="icon">📊</span> 2. Data yang Kami Kumpulkan</h2>
+    <p>ShalatKu mengumpulkan data berikut untuk menjalankan fitur-fiturnya:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Jenis Data</th>
+            <th>Apa yang Dikumpulkan</th>
+            <th>Tujuan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Lokasi</strong></td>
+            <td>Koordinat GPS (lintang & bujur)</td>
+            <td>Menghitung jadwal shalat 5 waktu dan arah kiblat yang akurat</td>
+          </tr>
+          <tr>
+            <td><strong>Akun Google</strong></td>
+            <td>Nama tampilan, email, foto profil (jika login Google)</td>
+            <td>Autentikasi pengguna via Firebase Auth dan sinkronisasi data ibadah</td>
+          </tr>
+          <tr>
+            <td><strong>Data Ibadah</strong></td>
+            <td>Status shalat harian, streak, checklist ibadah, bacaan Quran, dzikir</td>
+            <td>Menyimpan dan menampilkan statistik ibadah Anda</td>
+          </tr>
+          <tr>
+            <td><strong>Pengingat</strong></td>
+            <td>Judul, waktu, dan pengulangan pengingat yang Anda buat</td>
+            <td>Mengirim notifikasi pengingat ibadah sesuai jadwal</td>
+          </tr>
+          <tr>
+            <td><strong>Preferensi</strong></td>
+            <td>Pengaturan tema, metode kalkulasi shalat, kota lokasi manual</td>
+            <td>Menyimpan preferensi tampilan dan perhitungan waktu shalat</td>
+          </tr>
+          <tr>
+            <td><strong>Token FCM</strong></td>
+            <td>Firebase Cloud Messaging token (jika login)</td>
+            <td>Pengiriman notifikasi push opsional dari developer</td>
+          </tr>
+          <tr>
+            <td><strong>Data Iklan</strong></td>
+            <td>Advertising ID (dikelola Google AdMob)</td>
+            <td>Menampilkan iklan yang relevan (lihat bagian Iklan)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="highlight">
+      ℹ️ Pengguna tamu (tanpa login Google) hanya menyimpan data secara lokal di perangkat.
+      Tidak ada data yang dikirim ke server tanpa persetujuan pengguna.
+    </div>
+  </section>
+
+  <!-- 3. Izin yang Diminta -->
+  <section>
+    <h2><span class="icon">🔐</span> 3. Izin Aplikasi</h2>
+    <p>ShalatKu meminta izin berikut di perangkat Android Anda:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Izin</th><th>Alasan</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td>
+            <td>Mendeteksi koordinat GPS untuk jadwal shalat dan arah kiblat</td>
+          </tr>
+          <tr>
+            <td><code>POST_NOTIFICATIONS</code></td>
+            <td>Mengirim notifikasi adzan dan pengingat ibadah</td>
+          </tr>
+          <tr>
+            <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+            <td>Menjadwalkan ulang alarm adzan setelah perangkat restart</td>
+          </tr>
+          <tr>
+            <td><code>FOREGROUND_SERVICE</code><br><code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td>
+            <td>Memainkan adzan penuh tanpa terpotong saat layar terkunci</td>
+          </tr>
+          <tr>
+            <td><code>WAKE_LOCK</code></td>
+            <td>Memastikan adzan berbunyi tepat waktu</td>
+          </tr>
+          <tr>
+            <td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td>
+            <td>Menjaga notifikasi shalat tetap akurat di perangkat dengan optimasi baterai agresif</td>
+          </tr>
+          <tr>
+            <td><code>INTERNET</code></td>
+            <td>Sinkronisasi data ibadah ke cloud dan memuat iklan</td>
+          </tr>
+          <tr>
+            <td><code>USE_EXACT_ALARM</code></td>
+            <td>Notifikasi shalat yang tepat waktu (diperlukan Android 12+)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px;">
+      Anda dapat mencabut izin lokasi kapan saja melalui Pengaturan perangkat.
+      Tanpa izin lokasi, Anda dapat memasukkan kota secara manual di Pengaturan aplikasi.
+    </p>
+  </section>
+
+  <!-- 4. Cara Penggunaan Data -->
+  <section>
+    <h2><span class="icon">⚙️</span> 4. Cara Kami Menggunakan Data</h2>
+    <ul>
+      <li>Menghitung dan menampilkan jadwal shalat 5 waktu berdasarkan lokasi Anda</li>
+      <li>Menampilkan kompas arah kiblat yang akurat</li>
+      <li>Menyimpan dan menampilkan statistik ibadah harian, streak, dan pencapaian</li>
+      <li>Menjadwalkan notifikasi adzan dan pengingat ibadah sesuai waktu yang Anda tentukan</li>
+      <li>Mensinkronkan data ibadah ke cloud agar dapat diakses di perangkat lain (fitur opsional, khusus pengguna yang login)</li>
+      <li>Menampilkan iklan melalui Google AdMob untuk mendukung pengembangan aplikasi</li>
+    </ul>
+  </section>
+
+  <!-- 5. Penyimpanan Data -->
+  <section>
+    <h2><span class="icon">💾</span> 5. Penyimpanan & Retensi Data</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Lokasi Simpan</th><th>Retensi</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pengaturan, preferensi</td>
+            <td>Lokal (SharedPreferences)</td>
+            <td>Selama app terinstall</td>
+          </tr>
+          <tr>
+            <td>Pengingat custom</td>
+            <td>Lokal (SQLite)</td>
+            <td>Selama app terinstall</td>
+          </tr>
+          <tr>
+            <td>Bookmark Quran</td>
+            <td>Lokal (SharedPreferences)</td>
+            <td>Selama app terinstall</td>
+          </tr>
+          <tr>
+            <td>Data ibadah harian (login)</td>
+            <td>Cloud — Firebase Firestore</td>
+            <td>Hingga akun dihapus atau pengguna minta penghapusan</td>
+          </tr>
+          <tr>
+            <td>Akun Google</td>
+            <td>Firebase Authentication</td>
+            <td>Hingga pengguna keluar / hapus akun</td>
+          </tr>
+          <tr>
+            <td>Token FCM</td>
+            <td>Firebase Firestore (field <code>meta/fcm</code>)</td>
+            <td>Diperbarui otomatis saat login</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px;">
+      Data cloud disimpan di server Firebase (Google) di region
+      <strong>asia-southeast2 (Jakarta)</strong>.
+    </p>
+  </section>
+
+  <!-- 6. Layanan Pihak Ketiga -->
+  <section>
+    <h2><span class="icon">🔗</span> 6. Layanan Pihak Ketiga</h2>
+    <p>ShalatKu menggunakan layanan pihak ketiga berikut, masing-masing dengan kebijakan privasi sendiri:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Layanan</th><th>Provider</th><th>Tujuan</th><th>Kebijakan Privasi</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Firebase Authentication</td>
+            <td>Google LLC</td>
+            <td>Login Google Sign-In</td>
+            <td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Firebase Firestore</td>
+            <td>Google LLC</td>
+            <td>Sinkronisasi data ibadah ke cloud</td>
+            <td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Firebase Cloud Messaging</td>
+            <td>Google LLC</td>
+            <td>Push notification opsional</td>
+            <td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Google AdMob</td>
+            <td>Google LLC</td>
+            <td>Iklan banner, interstitial, reward, native</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Google Sign-In</td>
+            <td>Google LLC</td>
+            <td>Autentikasi akun Google</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 7. Iklan (AdMob) -->
+  <section>
+    <h2><span class="icon">📢</span> 7. Iklan (Google AdMob)</h2>
+    <p>
+      ShalatKu menampilkan iklan melalui <strong>Google AdMob</strong> untuk mendukung
+      pengembangan aplikasi ini agar tetap gratis.
+    </p>
+    <ul>
+      <li>AdMob dapat menggunakan <strong>Advertising ID</strong> perangkat Anda untuk menampilkan iklan yang relevan</li>
+      <li>Anda dapat menonaktifkan personalisasi iklan melalui <strong>Pengaturan Google → Iklan → Nonaktifkan Personalisasi Iklan</strong></li>
+      <li>Jenis iklan yang digunakan: Banner, Interstitial, Reward, Native, App Open</li>
+      <li>ShalatKu tidak mengontrol konten iklan yang ditampilkan oleh AdMob</li>
+    </ul>
+    <div class="warning">
+      ⚠️ Google AdMob memiliki kebijakan privasi tersendiri.
+      Kunjungi <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+      untuk informasi lengkap tentang cara Google mengelola data iklan.
+    </div>
+  </section>
+
+  <!-- 8. Keamanan Data -->
+  <section>
+    <h2><span class="icon">🛡️</span> 8. Keamanan Data</h2>
+    <p>
+      Kami menerapkan langkah-langkah keamanan berikut untuk melindungi data Anda:
+    </p>
+    <ul>
+      <li>Komunikasi dengan server Firebase menggunakan enkripsi <strong>HTTPS/TLS</strong></li>
+      <li>Aturan keamanan Firestore memastikan setiap pengguna <strong>hanya dapat mengakses data miliknya sendiri</strong> (<code>users/{uid}/...</code>)</li>
+      <li>Autentikasi menggunakan OAuth 2.0 Google Sign-In yang terenkripsi</li>
+      <li>Tidak ada kata sandi yang disimpan — login sepenuhnya melalui Google</li>
+    </ul>
+    <p>
+      Meskipun demikian, tidak ada sistem yang 100% aman. Jika Anda menemukan celah keamanan,
+      harap hubungi kami segera.
+    </p>
+  </section>
+
+  <!-- 9. Hak Pengguna -->
+  <section id="hapus-akun">
+    <h2><span class="icon">👤</span> 9. Hak Pengguna & Kontrol Data</h2>
+    <p>Anda memiliki hak atas data Anda:</p>
+    <ul>
+      <li><strong>Akses:</strong> Lihat data ibadah Anda langsung di dalam aplikasi (tab Statistik)</li>
+      <li><strong>Koreksi:</strong> Edit atau hapus pengingat, reset statistik melalui Pengaturan → Reset Progres</li>
+      <li><strong>Hapus data cloud:</strong> Logout dari akun di Pengaturan → data Firestore dapat diminta dihapus via email</li>
+      <li><strong>Tanpa login:</strong> Gunakan aplikasi sebagai tamu — tidak ada data yang dikirim ke cloud</li>
+      <li><strong>Cabut akses Google:</strong> Kunjungi <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a> dan cabut akses ShalatKu</li>
+    </ul>
+    <p>
+      Untuk meminta penghapusan data, kirim email ke
+      <strong>zalifxstudio@gmail.com</strong> dengan subjek
+      <em>"Penghapusan Data ShalatKu — [email akun Google Anda]"</em>.
+      Permintaan akan diproses dalam <strong>14 hari kerja</strong>.
+    </p>
+  </section>
+
+  <!-- 10. Privasi Anak -->
+  <section>
+    <h2><span class="icon">👶</span> 10. Privasi Anak</h2>
+    <p>
+      ShalatKu ditujukan untuk pengguna umum (<strong>Everyone</strong>) dan tidak
+      secara sengaja mengumpulkan data dari anak di bawah usia 13 tahun.
+    </p>
+    <p>
+      Jika Anda adalah orang tua atau wali yang mengetahui bahwa anak Anda telah memberikan
+      data pribadi tanpa persetujuan, harap hubungi kami agar data tersebut dapat dihapus.
+    </p>
+  </section>
+
+  <!-- 11. Perubahan Kebijakan -->
+  <section>
+    <h2><span class="icon">🔄</span> 11. Perubahan Kebijakan Privasi</h2>
+    <p>
+      Kami dapat memperbarui Kebijakan Privasi ini sewaktu-waktu. Perubahan signifikan akan
+      diberitahukan melalui:
+    </p>
+    <ul>
+      <li>Pembaruan halaman ini (tanggal "Terakhir diperbarui" akan berubah)</li>
+      <li>Notifikasi di dalam aplikasi saat versi baru dirilis</li>
+    </ul>
+    <p>
+      Penggunaan berkelanjutan atas aplikasi setelah perubahan dipublikasikan
+      berarti Anda menerima kebijakan yang diperbarui.
+    </p>
+  </section>
+
+  <!-- 12. Kontak -->
+  <section>
+    <h2><span class="icon">✉️</span> 12. Hubungi Kami</h2>
+    <p>
+      Jika Anda memiliki pertanyaan, keluhan, atau permintaan terkait privasi data Anda,
+      silakan hubungi:
+    </p>
+    <ul>
+      <li><strong>Developer:</strong> Imam Alif Firmansyah (zalifxstudio)</li>
+      <li><strong>Email:</strong> <a href="mailto:zalifxstudio@gmail.com">zalifxstudio@gmail.com</a></li>
+      <li><strong>Website:</strong> <a href="https://zalifxstudio.github.io" target="_blank">zalifxstudio.github.io</a></li>
+    </ul>
+    <p>Kami berusaha merespons semua permintaan dalam waktu <strong>7 hari kerja</strong>.</p>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 <strong>zalifxstudio</strong> · Imam Alif Firmansyah</p>
+  <p style="margin-top:6px;">ShalatKu — Teman Ibadah Harian Anda 🤲</p>
+</footer>
+
+</body>
+</html>
