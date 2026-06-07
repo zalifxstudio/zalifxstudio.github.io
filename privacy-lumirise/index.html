@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Lumi Rise</title>
+  <meta name="description" content="Privacy Policy for Lumi Rise (Ocean Edition) by zalifxstudio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0d0d; --bg-card: #141414; --bg-surface: #1a1a1a;
+      --accent: #48cae4; --accent-2: #6dffd0; --accent-3: #ff6b9d;
+      --text: #f0f0f0; --muted: #9090a8; --faint: #555570;
+      --border: rgba(255,255,255,0.07);
+      --heading: 'Space Grotesk', sans-serif; --body: 'Inter', sans-serif;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--body); font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+    ::selection { background: var(--accent); color: #000; }
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-2); }
+
+    header {
+      background: linear-gradient(135deg, #001428 0%, #001a20 50%, #0d0d0d 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(72,202,228,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .app-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(72,202,228,0.1); border: 1px solid rgba(72,202,228,0.25);
+      border-radius: 999px; padding: 6px 16px 6px 8px;
+      font-family: var(--heading); font-size: 13px; font-weight: 600;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .app-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, #48cae4, #6dffd0, #ff6b9d); }
+    header h1 {
+      font-family: var(--heading); font-size: clamp(26px, 5vw, 40px);
+      font-weight: 700; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fff 30%, var(--accent));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 10px;
+    }
+    .meta { font-size: 13px; color: var(--muted); display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 12px; }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+
+    .container { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+    .section { margin-bottom: 40px; }
+    .section-title {
+      font-family: var(--heading); font-size: 18px; font-weight: 700;
+      letter-spacing: -0.01em; margin-bottom: 12px;
+      padding-left: 14px; border-left: 3px solid var(--accent);
+    }
+    p { color: #c8c8d8; margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+    ul { color: #c8c8d8; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .data-table th { background: var(--bg-surface); color: var(--accent); font-family: var(--heading); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    .data-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; color: #c8c8d8; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; font-family: var(--heading); }
+    .tag-device { background: rgba(90,173,255,0.15); color: #5aadff; }
+    .tag-local  { background: rgba(94,224,168,0.15); color: #5ee0a8; }
+    .tag-no     { background: rgba(255,255,255,0.07); color: var(--muted); }
+
+    .info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin: 16px 0; }
+    .info-card.teal   { border-color: rgba(72,202,228,0.25);  background: rgba(72,202,228,0.05); }
+    .info-card.blue   { border-color: rgba(90,173,255,0.25);  background: rgba(90,173,255,0.05); }
+    .info-card.green  { border-color: rgba(94,224,168,0.25);  background: rgba(94,224,168,0.05); }
+    .info-card.purple { border-color: rgba(183,148,246,0.25); background: rgba(183,148,246,0.05); }
+    .info-card p { color: #c8c8d8; }
+    .info-card strong { color: var(--text); }
+
+    .third-party { display: flex; align-items: flex-start; gap: 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; margin: 10px 0; }
+    .third-party-icon { width: 38px; height: 38px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 20px; background: var(--bg-surface); }
+    .third-party-info h4 { font-family: var(--heading); font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+    .third-party-info p { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+    .third-party-info a { font-size: 13px; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 44px 0; }
+    .lang-label { display: inline-block; font-size: 11px; font-weight: 600; font-family: var(--heading); text-transform: uppercase; letter-spacing: 0.1em; padding: 3px 10px; border-radius: 4px; margin-bottom: 28px; }
+    .lang-id { background: rgba(255,79,109,0.12); color: #ff4f6d; }
+    .lang-en { background: rgba(72,202,228,0.12); color: var(--accent); }
+
+    footer { text-align: center; padding: 28px 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--faint); }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .data-table { font-size: 12px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+      .third-party { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-badge"><span class="dot"></span>Lumi Rise · zalifxstudio</div>
+  <h1>Privacy Policy</h1>
+  <p style="color:#9090a8;font-size:15px;max-width:520px;margin:10px auto 0;">Kebijakan Privasi &amp; Privacy Policy</p>
+  <div class="meta">
+    <span>📅 Berlaku / Effective: <strong style="color:#e0e0f0;">1 Juni 2025</strong></span>
+    <span>📱 App ID: <code style="font-size:12px;color:#48cae4;">com.zalifxstudio.lumirise</code></span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- BAHASA INDONESIA -->
+  <span class="lang-label lang-id">🇮🇩 Bahasa Indonesia</span>
+
+  <div class="section">
+    <h2 class="section-title">Tentang Kebijakan Ini</h2>
+    <p>Kebijakan Privasi ini menjelaskan bagaimana <strong>Imam Alif Firmansyah (zalifxstudio)</strong> mengelola informasi ketika kamu menggunakan aplikasi game <strong>Lumi Rise</strong> ("Aplikasi") di Android.</p>
+    <p>Dengan menggunakan Aplikasi, kamu menyetujui praktik yang dijelaskan dalam kebijakan ini.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Data yang Dikumpulkan</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Jenis Data</th><th>Dikumpulkan oleh</th><th>Disimpan di</th><th>Dikirim ke Server?</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Advertising ID, info perangkat, IP, data penggunaan iklan</td>
+          <td>Google AdMob</td>
+          <td>Server Google</td>
+          <td><span class="tag tag-device">Ya, oleh Google</span></td>
+        </tr>
+        <tr>
+          <td>Progres game (skor terbaik, kedalaman, pearl)</td>
+          <td>Aplikasi</td>
+          <td>Perangkatmu (localStorage)</td>
+          <td><span class="tag tag-no">Tidak</span></td>
+        </tr>
+        <tr>
+          <td>Skin yang dibeli, preferensi musik</td>
+          <td>Aplikasi</td>
+          <td>Perangkatmu (localStorage)</td>
+          <td><span class="tag tag-no">Tidak</span></td>
+        </tr>
+        <tr>
+          <td>Chest harian, preferensi game</td>
+          <td>Aplikasi</td>
+          <td>Perangkatmu (localStorage)</td>
+          <td><span class="tag tag-no">Tidak</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="info-card green">
+      <p><strong>Tidak ada akun pengguna.</strong> Semua data tersimpan lokal di perangkatmu. Kami tidak menyimpan data pribadimu di server manapun.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Layanan Pihak Ketiga</h2>
+    <div class="third-party">
+      <div class="third-party-icon">📺</div>
+      <div class="third-party-info">
+        <h4>Google AdMob</h4>
+        <p>Menampilkan iklan (banner, interstitial, rewarded). Dapat mengumpulkan Advertising ID, info perangkat, dan data penggunaan untuk menayangkan iklan yang relevan.</p>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google →</a>
+      </div>
+    </div>
+    <div class="info-card blue">
+      <p>Kamu dapat <strong>menonaktifkan personalisasi iklan</strong> melalui <em>Pengaturan &gt; Google &gt; Iklan &gt; Nonaktifkan Personalisasi Iklan</em> di perangkat Android-mu. Iklan tetap tampil, namun tidak berdasarkan riwayat aktivitasmu.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Privasi Anak-Anak</h2>
+    <p>Aplikasi tidak secara sengaja mengumpulkan data pribadi dari pengguna di bawah usia 13 tahun. Jika kamu adalah orang tua atau wali dan memiliki kekhawatiran, silakan hubungi kami.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Hak Penggunamu</h2>
+    <ul>
+      <li><strong>Hapus data lokal:</strong> Pengaturan &gt; Aplikasi &gt; Lumi Rise &gt; Hapus Data.</li>
+      <li><strong>Reset Advertising ID:</strong> Pengaturan &gt; Google &gt; Iklan.</li>
+      <li><strong>Hubungi kami</strong> jika ada pertanyaan terkait privasi.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Kontak</h2>
+    <div class="info-card purple">
+      <p><strong>Developer:</strong> Imam Alif Firmansyah</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/zalifxstudio" target="_blank" rel="noopener">github.com/zalifxstudio</a></p>
+      <p><strong>Website:</strong> <a href="https://zalifxstudio.github.io" target="_blank" rel="noopener">zalifxstudio.github.io</a></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Perubahan Kebijakan</h2>
+    <p>Kami dapat memperbarui Kebijakan Privasi ini sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini. Penggunaan Aplikasi yang berkelanjutan dianggap sebagai persetujuanmu terhadap kebijakan yang baru.</p>
+  </div>
+
+  <hr />
+
+  <!-- ENGLISH -->
+  <span class="lang-label lang-en">🇬🇧 English</span>
+
+  <div class="section">
+    <h2 class="section-title">About This Policy</h2>
+    <p>This Privacy Policy describes how <strong>Imam Alif Firmansyah (zalifxstudio)</strong> handles information when you use the <strong>Lumi Rise</strong> game app ("App") on Android.</p>
+    <p>By using the App, you agree to the practices described in this policy.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Data We Collect</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Data Type</th><th>Collected By</th><th>Stored On</th><th>Sent to Server?</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Advertising ID, device info, IP address, ad usage data</td>
+          <td>Google AdMob</td>
+          <td>Google's servers</td>
+          <td><span class="tag tag-device">Yes, by Google</span></td>
+        </tr>
+        <tr>
+          <td>Game progress (best score, depth, pearls)</td>
+          <td>App</td>
+          <td>Your device (localStorage)</td>
+          <td><span class="tag tag-no">No</span></td>
+        </tr>
+        <tr>
+          <td>Purchased skins, music preferences</td>
+          <td>App</td>
+          <td>Your device (localStorage)</td>
+          <td><span class="tag tag-no">No</span></td>
+        </tr>
+        <tr>
+          <td>Daily chest state, game preferences</td>
+          <td>App</td>
+          <td>Your device (localStorage)</td>
+          <td><span class="tag tag-no">No</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="info-card green">
+      <p><strong>No user accounts.</strong> All data is stored locally on your device. We do not store your personal data on any server.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Third-Party Services</h2>
+    <div class="third-party">
+      <div class="third-party-icon">📺</div>
+      <div class="third-party-info">
+        <h4>Google AdMob</h4>
+        <p>Used to display ads (banner, interstitial, rewarded). May collect your Advertising ID, device information, and usage data to serve relevant ads.</p>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a>
+      </div>
+    </div>
+    <div class="info-card blue">
+      <p>You can <strong>opt out of ad personalization</strong> via <em>Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization</em> on your Android device. Ads will still appear but won't be based on your activity history.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Children's Privacy</h2>
+    <p>The App does not knowingly collect personal data from users under the age of 13. If you are a parent or guardian with concerns, please contact us.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Your Rights</h2>
+    <ul>
+      <li><strong>Clear local data:</strong> Settings &gt; Apps &gt; Lumi Rise &gt; Clear Data.</li>
+      <li><strong>Reset Advertising ID:</strong> Settings &gt; Google &gt; Ads.</li>
+      <li><strong>Contact us</strong> with any privacy questions.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Contact</h2>
+    <div class="info-card purple">
+      <p><strong>Developer:</strong> Imam Alif Firmansyah</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/zalifxstudio" target="_blank" rel="noopener">github.com/zalifxstudio</a></p>
+      <p><strong>Website:</strong> <a href="https://zalifxstudio.github.io" target="_blank" rel="noopener">zalifxstudio.github.io</a></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. Continued use of the App constitutes acceptance of the revised policy.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025 Imam Alif Firmansyah · <a href="https://zalifxstudio.github.io" target="_blank" rel="noopener">zalifxstudio</a></p>
+  <p style="margin-top:6px;">Privacy Policy — Lumi Rise · <code style="font-size:11px;">com.zalifxstudio.lumirise</code></p>
+</footer>
+
+</body>
+</html>
