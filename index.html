@@ -115,18 +115,37 @@
     .skill-tag.accent { background: var(--accent-dim); color: var(--accent); border-color: var(--border-accent); }
     .skill-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
     #projects { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-surface) 50%, var(--bg) 100%); }
-    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition); position: relative; overflow: hidden; }
+    .projects-intro { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; }
+    .projects-count { font-size: 14px; color: var(--muted); }
+    .projects-count strong { color: var(--accent); font-family: var(--heading); }
+    .filter-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+    .filter-tab { font-family: var(--heading); font-size: 13px; font-weight: 600; color: var(--muted); background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 9px 18px; cursor: pointer; transition: color var(--transition), border-color var(--transition), background var(--transition); }
+    .filter-tab:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+    .filter-tab.active { color: #fff; background: var(--accent); border-color: var(--accent); }
+    .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition); position: relative; overflow: hidden; }
     .project-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0; transition: opacity var(--transition); }
     .project-card:hover { border-color: var(--border-accent); transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,0.5); }
     .project-card:hover::after { opacity: 1; }
-    .project-private { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; font-family: var(--heading); text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); background: var(--bg-surface); border: 1px solid var(--border); border-radius: 100px; padding: 3px 10px; margin-bottom: 16px; width: fit-content; }
-    .project-number { font-family: var(--heading); font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 12px; opacity: 0.7; }
-    .project-name { font-family: var(--heading); font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 12px; letter-spacing: -0.01em; }
-    .project-desc { font-size: 14px; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 24px; }
-    .project-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
-    .tech-tag { font-size: 11px; font-weight: 500; font-family: var(--heading); padding: 4px 10px; border-radius: 100px; background: var(--blue-dim); color: #6fa3ff; border: 1px solid rgba(37,99,235,0.2); letter-spacing: 0.04em; }
-    .project-link-disabled { display: inline-flex; align-items: center; gap: 8px; font-family: var(--heading); font-size: 13px; font-weight: 600; color: var(--muted); opacity: 0.5; cursor: default; }
+    .project-top-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 14px; }
+    .project-cat-tag { font-size: 10px; font-weight: 700; font-family: var(--heading); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .status-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; font-family: var(--heading); text-transform: uppercase; letter-spacing: 0.06em; border-radius: 100px; padding: 3px 10px; white-space: nowrap; }
+    .status-badge .dot { width: 6px; height: 6px; border-radius: 50%; }
+    .status-live { background: rgba(34,197,94,0.12); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+    .status-live .dot { background: #4ade80; }
+    .status-ready { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--border-accent); }
+    .status-ready .dot { background: var(--accent); }
+    .status-wip { background: var(--bg-surface); color: var(--muted); border: 1px solid var(--border); }
+    .status-wip .dot { background: var(--muted); }
+    .project-name { font-family: var(--heading); font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; letter-spacing: -0.01em; }
+    .project-desc { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 16px; }
+    .project-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .tech-tag { font-size: 10.5px; font-weight: 500; font-family: var(--heading); padding: 3px 9px; border-radius: 100px; background: var(--blue-dim); color: #6fa3ff; border: 1px solid rgba(37,99,235,0.2); letter-spacing: 0.03em; }
+    .project-link-disabled { display: inline-flex; align-items: center; gap: 6px; font-family: var(--heading); font-size: 12px; font-weight: 600; color: var(--muted); opacity: 0.5; cursor: default; }
+    .project-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--heading); font-size: 12px; font-weight: 600; color: var(--accent); transition: gap var(--transition); }
+    .project-link:hover { gap: 9px; }
+    @media (max-width: 900px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } }
     #contact { text-align: center; }
     .contact-wrap { max-width: 600px; margin: 0 auto; }
     .contact-headline { font-size: clamp(32px, 5vw, 52px); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 20px; line-height: 1.1; }
@@ -218,9 +237,9 @@
             <div class="stat-desc">Adobe Illustrator · Visual storytelling · Brand identity</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">4</div>
+            <div class="stat-number">58</div>
             <div class="stat-label">Projects Built</div>
-            <div class="stat-desc">Web apps, mobile apps, management systems</div>
+            <div class="stat-desc">Games, mobile apps, web tools, desktop software</div>
           </div>
           <div class="ai-ratio">
             <div class="ai-ratio-title">Development Ratio</div>
@@ -265,42 +284,15 @@
   </section>
   <section id="projects">
     <div class="container">
-      <div class="section-label fade-in">Projects</div>
-      <h2 class="section-title fade-in">Things I've <span>built.</span></h2>
-      <div class="projects-grid">
-        <div class="project-card fade-in">
-          <div class="project-number">01 / SISUKAMU</div>
-          <div class="project-private"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Repo</div>
-          <h3 class="project-name">SISUKAMU</h3>
-          <p class="project-desc">Sistem Informasi Surat Keluar Masuk untuk SMP Negeri 3 Baregbeg. Membantu administrasi sekolah mengelola surat masuk dan keluar secara digital — terintegrasi langsung dengan Google Sheets sebagai database.</p>
-          <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Vite</span><span class="tech-tag">TailwindCSS</span><span class="tech-tag">Google Sheets API</span></div>
-          <span class="project-link-disabled"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Repository</span>
+      <div class="projects-intro">
+        <div class="fade-in">
+          <div class="section-label">Projects</div>
+          <h2 class="section-title" style="margin-bottom:0;">Semua yang telah <span>dibangun.</span></h2>
         </div>
-        <div class="project-card fade-in fade-in-delay-1">
-          <div class="project-number">02 / PINTARQUIZ</div>
-          <div class="project-private"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Repo</div>
-          <h3 class="project-name">PintarQuiz</h3>
-          <p class="project-desc">Game kuis Android yang dibangun dengan Flutter. Dirancang untuk pengalaman belajar yang menyenangkan — dengan tampilan modern, sistem skor, dan kategori soal yang variatif.</p>
-          <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Dart</span><span class="tech-tag">Android</span><span class="tech-tag">Mobile Game</span></div>
-          <span class="project-link-disabled"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Repository</span>
-        </div>
-        <div class="project-card fade-in fade-in-delay-2">
-          <div class="project-number">03 / ABSENSI WARTAWAN</div>
-          <div class="project-private"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Repo</div>
-          <h3 class="project-name">Absensi Wartawan</h3>
-          <p class="project-desc">Web app absensi khusus untuk wartawan. Sistem pencatatan kehadiran yang simpel, cepat, dan bisa langsung digunakan di browser — tanpa instalasi, tanpa ribet.</p>
-          <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Web App</span></div>
-          <span class="project-link-disabled"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Repository</span>
-        </div>
-        <div class="project-card fade-in fade-in-delay-3">
-          <div class="project-number">04 / DONGHUA 3D QUIZ</div>
-          <div class="project-private"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Repo</div>
-          <h3 class="project-name">Donghua 3D Quiz</h3>
-          <p class="project-desc">Game Android bertema Donghua (animasi China 3D) yang dibangun dengan Flutter. Tantang pengetahuan kamu tentang karakter, cerita, dan dunia Donghua dalam format kuis interaktif.</p>
-          <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Dart</span><span class="tech-tag">Android</span><span class="tech-tag">Game</span></div>
-          <span class="project-link-disabled"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Repository</span>
-        </div>
+        <div class="projects-count fade-in">Total <strong id="projectsCount">0</strong> proyek — games, aplikasi, web &amp; tools</div>
       </div>
+      <div class="filter-tabs fade-in" id="filterTabs"></div>
+      <div class="projects-grid" id="projectsGrid"></div>
     </div>
   </section>
   <section id="contact">
@@ -333,6 +325,113 @@
     </div>
   </footer>
   <script>
+    const STATUS_META = {
+      live: { label: 'Live', icon: '&#128994;' },
+      done: { label: 'Selesai', icon: '&#128993;' },
+      wip: { label: 'Pengembangan', icon: '&#9898;' }
+    };
+    const PROJECTS = [
+      // Games
+      { cat: 'games', name: 'Wordzy', desc: 'Word-scramble puzzle bilingual 5 bahasa, IAP + AdMob.', tech: ['Capacitor', 'Firebase', 'AdMob'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.wordzy.game' },
+      { cat: 'games', name: 'Donghua 3D Quiz', desc: 'Kuis karakter Donghua 3D — featured di Play Store.', tech: ['Flutter', 'Firebase'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.donghua3dquiz' },
+      { cat: 'games', name: 'PintarQuiz', desc: 'Kuis SD/SMP/SMA, rating 5.0 bintang.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.pintarquiz' },
+      { cat: 'games', name: 'BubbleFall', desc: 'Match-3 bubble popping dengan power-up.', tech: ['Capacitor', 'AdMob'], status: 'done' },
+      { cat: 'games', name: 'PixlDash', desc: 'Pixel endless runner — 18 skin & passive ability.', tech: ['Capacitor'], status: 'done' },
+      { cat: 'games', name: 'LumiRise', desc: 'Dual tema NES + Ocean Kawaii, treasure chest IAP.', tech: ['Capacitor'], status: 'wip' },
+      { cat: 'games', name: 'WordFall', desc: 'Arcade jatuhnya huruf membentuk kata.', tech: ['JavaScript'], status: 'wip' },
+      { cat: 'games', name: 'Duck Adventure', desc: '2D platformer dengan Flame engine.', tech: ['Flutter', 'Flame'], status: 'wip' },
+      { cat: 'games', name: 'Duck Endless', desc: 'Endless runner bertema NES.', tech: ['Flutter', 'Flame'], status: 'wip' },
+      { cat: 'games', name: 'Quiz Million', desc: 'Game kuis & trivia bergaya show TV.', tech: ['Flutter'], status: 'wip' },
+      { cat: 'games', name: 'MythicSort', desc: 'Puzzle penyortiran kartu bertema mitologi.', tech: ['Flutter'], status: 'wip' },
+      { cat: 'games', name: 'ZenBlocks', desc: 'Block puzzle internasional, 4 bahasa (EN/DE/JA/NO).', tech: ['Flutter', 'Firebase'], status: 'done' },
+      { cat: 'games', name: 'PlanetMerge', desc: 'Merge-idle 18 tier planet dengan shop & upgrade.', tech: ['Flutter', 'AdMob'], status: 'done' },
+      { cat: 'games', name: 'Glowfly: Night Adventure', desc: 'Flappy-style petualangan malam bertema kunang-kunang.', tech: ['Flutter', 'Flame'], status: 'done' },
+      { cat: 'games', name: 'Dango Dash', desc: 'Arcade toko dango dengan monetisasi bertingkat.', tech: ['Flutter', 'Firebase'], status: 'wip' },
+      { cat: 'games', name: 'NekketsuSoccer', desc: 'Soccer brawler top-down 3v3.', tech: ['Godot 4'], status: 'wip' },
+      // Apps
+      { cat: 'apps', name: 'ShalatKu', desc: 'Jadwal shalat & pengingat adzan.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.shalatku' },
+      { cat: 'apps', name: 'QuizMate', desc: 'Kuis internasional untuk pasar global.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.quizmate' },
+      { cat: 'apps', name: 'Yumegami', desc: 'Wallpaper anime bertenaga AI.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.yumegami' },
+      { cat: 'apps', name: 'AyoMancing', desc: 'E-commerce produk mancing khas Indonesia.', tech: ['Flutter', 'Firebase'], status: 'wip' },
+      { cat: 'apps', name: 'Warung Pintar', desc: 'POS untuk warung/toko Indonesia — multi-role.', tech: ['Flutter', 'Firebase'], status: 'wip' },
+      { cat: 'apps', name: 'NoteSync', desc: 'Catatan offline-first + sync ke GitHub Gist.', tech: ['Flutter'], status: 'done' },
+      { cat: 'apps', name: 'Pindahin', desc: 'Migrasi file dari memori internal ke SD card.', tech: ['Flutter'], status: 'done' },
+      { cat: 'apps', name: 'GerdFit', desc: 'Kesehatan lambung (GERD) & pembentukan otot.', tech: ['Flutter'], status: 'wip' },
+      { cat: 'apps', name: 'TenangKu', desc: 'Afirmasi harian & teknik pernapasan anti-stres.', tech: ['Flutter'], status: 'wip' },
+      { cat: 'apps', name: 'HabitsKu', desc: 'Tracker habits, shalat, dan niat bersih pribadi.', tech: ['Flutter'], status: 'wip' },
+      { cat: 'apps', name: 'E-Presensi Netibar', desc: 'Presensi ASN berbasis lokasi GPS.', tech: ['Flutter'], status: 'wip' },
+      { cat: 'apps', name: 'ReadRight', desc: 'Latihan membaca Bahasa Inggris — STT + TTS + skor akurasi.', tech: ['Flutter'], status: 'done' },
+      { cat: 'apps', name: 'KaloriKu', desc: 'Pelacak kalori makanan khas Indonesia.', tech: ['Flutter', 'Riverpod'], status: 'wip' },
+      { cat: 'apps', name: 'MaknaShalat', desc: 'Arti bacaan shalat menurut 4 mazhab.', tech: ['Flutter'], status: 'done' },
+      { cat: 'apps', name: 'FitRasul', desc: 'Panduan fitness gabungan dari 3 sumber referensi.', tech: ['Capacitor'], status: 'wip' },
+      { cat: 'apps', name: 'Gym Guide', desc: 'Tracker workout, kalori, dan progress foto.', tech: ['Flutter'], status: 'done' },
+      { cat: 'apps', name: 'TajwidKu', desc: 'Cek bacaan Quran & tajwid berbasis AI.', tech: ['Flutter', 'Groq Whisper'], status: 'done' },
+      { cat: 'apps', name: 'PahamiShalat', desc: 'Edukasi tata cara shalat A-Z mazhab Syafi\'i.', tech: ['Flutter'], status: 'done' },
+      { cat: 'apps', name: 'Vivi App', desc: 'Aplikasi keamanan tinggi — obfuscation & anti-root.', tech: ['Flutter'], status: 'done' },
+      { cat: 'apps', name: 'WA Chatbot', desc: 'Auto-reply WhatsApp Business bertenaga AI.', tech: ['Capacitor', 'Baileys', 'Groq'], status: 'live' },
+      // Web
+      { cat: 'web', name: 'zalifxstudio.github.io', desc: 'Portofolio pribadi yang sedang Anda lihat ini.', tech: ['HTML', 'CSS', 'JS'], status: 'live', link: 'https://zalifxstudio.github.io/' },
+      { cat: 'web', name: 'Website Terpadu SMPN 3 Baregbeg', desc: '7 halaman: SPMB, SPPD, sambutan, media sosial sekolah.', tech: ['HTML', 'Firebase Hosting'], status: 'live', link: 'https://smpn3baregbeg.web.app' },
+      { cat: 'web', name: 'SKL SMPN 3 Baregbeg', desc: 'Generator Surat Keterangan Lulus + transkrip nilai.', tech: ['HTML', 'JS'], status: 'live', link: 'https://zalifxstudio.github.io/skl-smpn3baregbeg/' },
+      { cat: 'web', name: 'Kode Surat Pendidikan', desc: 'Referensi kode klasifikasi arsip surat sekolah.', tech: ['HTML', 'JS'], status: 'live', link: 'https://zalifxstudio.github.io/kode-surat-pendidikan/' },
+      { cat: 'web', name: 'Panduan Shalat Lengkap', desc: '13 bab panduan shalat + habit tracker + kumpulan doa.', tech: ['HTML', 'JS'], status: 'live', link: 'https://zalifxstudio.github.io/panduan-shalat/' },
+      { cat: 'web', name: 'Fitness Guide + Jadwal Gym', desc: 'Panduan fitness interaktif & penjadwalan latihan.', tech: ['HTML', 'JS'], status: 'live', link: 'https://zalifxstudio.github.io/fitness-guide/' },
+      { cat: 'web', name: 'Absensi Wartawan', desc: 'Form absensi kehadiran wartawan di event.', tech: ['HTML', 'JS', 'Cloudflare Worker'], status: 'live', link: 'https://zalifxstudio.github.io/absensi-wartawan/' },
+      { cat: 'web', name: 'SPPD Generator', desc: 'Generator dokumen SPPD dinas untuk sekolah.', tech: ['HTML', 'jsPDF'], status: 'live', link: 'https://zalifxstudio.github.io/sppd-smpn3brg/' },
+      { cat: 'web', name: 'Ujian Online SMPN 3 Baregbeg', desc: 'Sistem ujian online + OCR soal PDF + import CSV.', tech: ['React', 'Vite', 'Firebase'], status: 'live', link: 'https://ujian-smpn3baregbeg.pages.dev' },
+      { cat: 'web', name: 'zalifx Blog', desc: 'Blog teknis seputar Claude Code & game development.', tech: ['HTML', 'CSS', 'JS'], status: 'live', link: 'https://zalifxstudio.github.io/zalifx-blog/' },
+      { cat: 'web', name: 'Leonardo Auto-Login', desc: 'Auto-login Leonardo.ai via Canva dengan pemilihan tim.', tech: ['Chrome Ext MV3'], status: 'done' },
+      { cat: 'web', name: 'ChatGPT Image Downloader', desc: 'Download massal gambar full-res dari chatgpt.com.', tech: ['Chrome Ext MV3'], status: 'done' },
+      { cat: 'web', name: 'Extension Detector', desc: 'Menampilkan semua ekstensi Chrome yang terpasang.', tech: ['Chrome Ext MV3'], status: 'done' },
+      // Tools & Desktop
+      { cat: 'tools', name: 'Security Monitor', desc: 'Suite monitoring keamanan Windows di system tray.', tech: ['Python', 'CustomTkinter'], status: 'done' },
+      { cat: 'tools', name: 'AV Monitor', desc: 'Monitoring ancaman antivirus & malware desktop.', tech: ['Python', 'Tkinter'], status: 'done' },
+      { cat: 'tools', name: 'PC Optimizer', desc: 'Pembersih file temp & pengelola startup Windows.', tech: ['Python', 'CustomTkinter'], status: 'done' },
+      { cat: 'tools', name: 'SentinelX', desc: 'Sentinel keamanan sistem berbasis PyInstaller.', tech: ['Python'], status: 'done' },
+      { cat: 'tools', name: 'Folder Colorizer', desc: 'Pewarna ikon folder Windows.', tech: ['Python'], status: 'done' },
+      { cat: 'tools', name: 'ZalifGuard', desc: 'Proteksi keamanan Windows via scheduled task.', tech: ['PowerShell'], status: 'live' },
+      { cat: 'tools', name: 'Image Generator', desc: 'Generator gambar massal via Pollinations/Leonardo.', tech: ['Python'], status: 'done' },
+      { cat: 'tools', name: 'ComfyUI Batch', desc: 'Generator gambar batch lokal — Flux + ESRGAN upscale.', tech: ['Python'], status: 'wip' },
+      { cat: 'tools', name: 'Vivi Creator Tools / TokenBoost', desc: 'Auto-refill token Leonardo.ai via Canva, multi-akun.', tech: ['Electron'], status: 'live' }
+    ];
+    const CATS = [
+      { key: 'all', label: 'Semua' },
+      { key: 'games', label: 'Games' },
+      { key: 'apps', label: 'Apps' },
+      { key: 'web', label: 'Web' },
+      { key: 'tools', label: 'Tools & Desktop' }
+    ];
+    let activeCat = 'all';
+    function renderTabs() {
+      const wrap = document.getElementById('filterTabs');
+      wrap.innerHTML = CATS.map(c => `<button class="filter-tab${c.key === activeCat ? ' active' : ''}" data-cat="${c.key}">${c.label}</button>`).join('');
+      wrap.querySelectorAll('.filter-tab').forEach(btn => {
+        btn.addEventListener('click', () => { activeCat = btn.getAttribute('data-cat'); renderTabs(); renderGrid(); });
+      });
+    }
+    function renderGrid() {
+      const grid = document.getElementById('projectsGrid');
+      const list = activeCat === 'all' ? PROJECTS : PROJECTS.filter(p => p.cat === activeCat);
+      document.getElementById('projectsCount').textContent = activeCat === 'all' ? PROJECTS.length : list.length;
+      grid.innerHTML = list.map(p => {
+        const meta = STATUS_META[p.status];
+        const linkHtml = p.link
+          ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="project-link">Buka <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`
+          : `<span class="project-link-disabled">${meta.label === 'Live' ? 'Aktif' : meta.label}</span>`;
+        return `<div class="project-card fade-in visible">
+          <div class="project-top-row">
+            <span class="project-cat-tag">${CATS.find(c => c.key === p.cat).label}</span>
+            <span class="status-badge status-${p.status}"><span class="dot"></span>${meta.label}</span>
+          </div>
+          <h3 class="project-name">${p.name}</h3>
+          <p class="project-desc">${p.desc}</p>
+          <div class="project-tech">${p.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}</div>
+          ${linkHtml}
+        </div>`;
+      }).join('');
+    }
+    renderTabs();
+    renderGrid();
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
     const navToggle = document.getElementById('navToggle');
