@@ -115,15 +115,30 @@
     .skill-tag.accent { background: var(--accent-dim); color: var(--accent); border-color: var(--border-accent); }
     .skill-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
     #projects { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-surface) 50%, var(--bg) 100%); }
-    .projects-intro { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; }
+    .projects-intro { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 16px; }
     .projects-count { font-size: 14px; color: var(--muted); }
     .projects-count strong { color: var(--accent); font-family: var(--heading); }
-    .filter-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
-    .filter-tab { font-family: var(--heading); font-size: 13px; font-weight: 600; color: var(--muted); background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 9px 18px; cursor: pointer; transition: color var(--transition), border-color var(--transition), background var(--transition); }
+    .status-stats-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+    .status-stat-chip { display: inline-flex; align-items: center; gap: 7px; font-family: var(--heading); font-size: 12px; font-weight: 600; color: var(--muted); background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 7px 14px; }
+    .status-stat-chip .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .status-stat-chip strong { color: var(--text); font-weight: 700; }
+    .projects-toolbar { position: sticky; top: 64px; z-index: 40; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; background: rgba(13,13,13,0.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 28px; }
+    .filter-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter-tab { display: inline-flex; align-items: center; gap: 5px; font-family: var(--heading); font-size: 13px; font-weight: 600; color: var(--muted); background: var(--bg-surface); border: 1px solid var(--border); border-radius: 100px; padding: 9px 16px; cursor: pointer; transition: color var(--transition), border-color var(--transition), background var(--transition); }
+    .filter-tab .tab-count { opacity: 0.6; font-weight: 500; }
     .filter-tab:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
     .filter-tab.active { color: #fff; background: var(--accent); border-color: var(--accent); }
+    .filter-tab.active .tab-count { opacity: 0.85; }
+    .search-input-wrap { position: relative; flex: 1; min-width: 180px; max-width: 260px; }
+    .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+    .search-input { width: 100%; background: var(--bg-surface); border: 1px solid var(--border); border-radius: 100px; padding: 9px 14px 9px 36px; color: var(--text); font-family: var(--body); font-size: 13px; outline: none; transition: border-color var(--transition); }
+    .search-input::placeholder { color: var(--muted); }
+    .search-input:focus { border-color: var(--border-accent); }
     .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .projects-empty { grid-column: 1 / -1; text-align: center; padding: 48px 20px; color: var(--muted); font-size: 14px; }
     .project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition); position: relative; overflow: hidden; }
+    .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: transparent; }
+    .project-card.is-live::before { background: linear-gradient(90deg, #4ade80, rgba(74,222,128,0.15)); }
     .project-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0; transition: opacity var(--transition); }
     .project-card:hover { border-color: var(--border-accent); transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,0.5); }
     .project-card:hover::after { opacity: 1; }
@@ -145,7 +160,12 @@
     .project-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--heading); font-size: 12px; font-weight: 600; color: var(--accent); transition: gap var(--transition); }
     .project-link:hover { gap: 9px; }
     @media (max-width: 900px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      .projects-toolbar { flex-direction: column; align-items: stretch; }
+      .search-input-wrap { max-width: none; }
+      .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+    }
     #contact { text-align: center; }
     .contact-wrap { max-width: 600px; margin: 0 auto; }
     .contact-headline { font-size: clamp(32px, 5vw, 52px); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 20px; line-height: 1.1; }
@@ -156,6 +176,9 @@
     .contact-item:hover { border-color: var(--border-accent); color: var(--text); transform: translateY(-2px); }
     .contact-item svg { flex-shrink: 0; }
     .contact-divider { width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 0 auto 40px; border-radius: 2px; }
+    .back-to-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; box-shadow: 0 8px 24px rgba(255,107,43,0.35); opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity var(--transition), transform var(--transition), background var(--transition); z-index: 90; }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .back-to-top:hover { background: #e85d1f; }
     footer { border-top: 1px solid var(--border); padding: 28px 0; text-align: center; }
     .footer-text { font-size: 13px; color: var(--muted); font-family: var(--heading); }
     .footer-text span { color: var(--accent); }
@@ -289,12 +312,22 @@
           <div class="section-label">Projects</div>
           <h2 class="section-title" style="margin-bottom:0;">Semua yang telah <span>dibangun.</span></h2>
         </div>
-        <div class="projects-count fade-in">Total <strong id="projectsCount">0</strong> proyek — games, aplikasi, web &amp; tools</div>
+        <div class="projects-count fade-in">Menampilkan <strong id="projectsCount">0</strong> dari <strong id="projectsTotal">0</strong> proyek</div>
       </div>
-      <div class="filter-tabs fade-in" id="filterTabs"></div>
+      <div class="status-stats-row fade-in" id="statusStatsRow"></div>
+      <div class="projects-toolbar fade-in">
+        <div class="filter-tabs" id="filterTabs"></div>
+        <div class="search-input-wrap">
+          <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="projectSearch" placeholder="Cari nama atau teknologi..." />
+        </div>
+      </div>
       <div class="projects-grid" id="projectsGrid"></div>
     </div>
   </section>
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
   <section id="contact">
     <div class="container">
       <div class="contact-wrap fade-in">
@@ -402,23 +435,41 @@
       { key: 'tools', label: 'Tools & Desktop' }
     ];
     let activeCat = 'all';
+    let searchQuery = '';
+    function catCount(key) { return key === 'all' ? PROJECTS.length : PROJECTS.filter(p => p.cat === key).length; }
     function renderTabs() {
       const wrap = document.getElementById('filterTabs');
-      wrap.innerHTML = CATS.map(c => `<button class="filter-tab${c.key === activeCat ? ' active' : ''}" data-cat="${c.key}">${c.label}</button>`).join('');
+      wrap.innerHTML = CATS.map(c => `<button class="filter-tab${c.key === activeCat ? ' active' : ''}" data-cat="${c.key}">${c.label} <span class="tab-count">${catCount(c.key)}</span></button>`).join('');
       wrap.querySelectorAll('.filter-tab').forEach(btn => {
         btn.addEventListener('click', () => { activeCat = btn.getAttribute('data-cat'); renderTabs(); renderGrid(); });
       });
     }
+    function renderStatusStats() {
+      const order = ['live', 'done', 'wip'];
+      const wrap = document.getElementById('statusStatsRow');
+      wrap.innerHTML = order.map(key => {
+        const meta = STATUS_META[key];
+        const count = PROJECTS.filter(p => p.status === key).length;
+        return `<span class="status-stat-chip"><span class="dot status-${key}-dot" style="background:${key === 'live' ? '#4ade80' : key === 'done' ? 'var(--accent)' : 'var(--muted)'}"></span><strong>${count}</strong> ${meta.label}</span>`;
+      }).join('');
+    }
     function renderGrid() {
       const grid = document.getElementById('projectsGrid');
-      const list = activeCat === 'all' ? PROJECTS : PROJECTS.filter(p => p.cat === activeCat);
-      document.getElementById('projectsCount').textContent = activeCat === 'all' ? PROJECTS.length : list.length;
+      const q = searchQuery.trim().toLowerCase();
+      let list = activeCat === 'all' ? PROJECTS : PROJECTS.filter(p => p.cat === activeCat);
+      if (q) { list = list.filter(p => p.name.toLowerCase().includes(q) || p.tech.some(t => t.toLowerCase().includes(q)) || p.desc.toLowerCase().includes(q)); }
+      document.getElementById('projectsCount').textContent = list.length;
+      document.getElementById('projectsTotal').textContent = PROJECTS.length;
+      if (list.length === 0) {
+        grid.innerHTML = `<div class="projects-empty">Tidak ada proyek yang cocok dengan "${searchQuery}".</div>`;
+        return;
+      }
       grid.innerHTML = list.map(p => {
         const meta = STATUS_META[p.status];
         const linkHtml = p.link
           ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="project-link">Buka <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`
           : `<span class="project-link-disabled">${meta.label === 'Live' ? 'Aktif' : meta.label}</span>`;
-        return `<div class="project-card fade-in visible">
+        return `<div class="project-card fade-in visible${p.status === 'live' ? ' is-live' : ''}">
           <div class="project-top-row">
             <span class="project-cat-tag">${CATS.find(c => c.key === p.cat).label}</span>
             <span class="status-badge status-${p.status}"><span class="dot"></span>${meta.label}</span>
@@ -431,7 +482,12 @@
       }).join('');
     }
     renderTabs();
+    renderStatusStats();
     renderGrid();
+    document.getElementById('projectSearch').addEventListener('input', (e) => { searchQuery = e.target.value; renderGrid(); });
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => { backToTop.classList.toggle('visible', window.scrollY > 700); }, { passive: true });
+    backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
     const navToggle = document.getElementById('navToggle');
