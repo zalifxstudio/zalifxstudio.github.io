@@ -143,6 +143,10 @@
     .project-card:hover { border-color: var(--border-accent); transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,0.5); }
     .project-card:hover::after { opacity: 1; }
     .project-top-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 14px; }
+    .project-header-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .project-icon { width: 44px; height: 44px; border-radius: 11px; flex-shrink: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--bg-surface); border: 1px solid var(--border); font-size: 20px; }
+    .project-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .project-header-row .project-name { margin-bottom: 0; }
     .project-cat-tag { font-size: 10px; font-weight: 700; font-family: var(--heading); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
     .status-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; font-family: var(--heading); text-transform: uppercase; letter-spacing: 0.06em; border-radius: 100px; padding: 3px 10px; white-space: nowrap; }
     .status-badge .dot { width: 6px; height: 6px; border-radius: 50%; }
@@ -365,9 +369,9 @@
     };
     const PROJECTS = [
       // Games
-      { cat: 'games', name: 'Wordzy', desc: 'Word-scramble puzzle bilingual 5 bahasa, IAP + AdMob.', tech: ['Capacitor', 'Firebase', 'AdMob'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.wordzy.game' },
-      { cat: 'games', name: 'Donghua 3D Quiz', desc: 'Kuis karakter Donghua 3D — featured di Play Store.', tech: ['Flutter', 'Firebase'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.donghua3dquiz' },
-      { cat: 'games', name: 'PintarQuiz', desc: 'Kuis SD/SMP/SMA, rating 5.0 bintang.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.pintarquiz' },
+      { cat: 'games', name: 'Wordzy', desc: 'Word-scramble puzzle bilingual 5 bahasa, IAP + AdMob.', tech: ['Capacitor', 'Firebase', 'AdMob'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.wordzy.game', icon: 'assets/project-icons/wordzy.png' },
+      { cat: 'games', name: 'Donghua 3D Quiz', desc: 'Kuis karakter Donghua 3D — featured di Play Store.', tech: ['Flutter', 'Firebase'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.donghua3dquiz', icon: 'assets/project-icons/donghua3dquiz.png' },
+      { cat: 'games', name: 'PintarQuiz', desc: 'Kuis SD/SMP/SMA, rating 5.0 bintang.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.pintarquiz', icon: 'assets/project-icons/pintarquiz.png' },
       { cat: 'games', name: 'BubbleFall', desc: 'Match-3 bubble popping dengan power-up.', tech: ['Capacitor', 'AdMob'], status: 'done' },
       { cat: 'games', name: 'PixlDash', desc: 'Pixel endless runner — 18 skin & passive ability.', tech: ['Capacitor'], status: 'done' },
       { cat: 'games', name: 'LumiRise', desc: 'Dual tema NES + Ocean Kawaii, treasure chest IAP.', tech: ['Capacitor'], status: 'wip' },
@@ -382,9 +386,9 @@
       { cat: 'games', name: 'Dango Dash', desc: 'Arcade toko dango dengan monetisasi bertingkat.', tech: ['Flutter', 'Firebase'], status: 'wip' },
       { cat: 'games', name: 'NekketsuSoccer', desc: 'Soccer brawler top-down 3v3.', tech: ['Godot 4'], status: 'wip' },
       // Apps
-      { cat: 'apps', name: 'ShalatKu', desc: 'Jadwal shalat & pengingat adzan.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.shalatku' },
-      { cat: 'apps', name: 'QuizMate', desc: 'Kuis internasional untuk pasar global.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.quizmate' },
-      { cat: 'apps', name: 'Yumegami', desc: 'Wallpaper anime bertenaga AI.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.yumegami' },
+      { cat: 'apps', name: 'ShalatKu', desc: 'Jadwal shalat & pengingat adzan.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.shalatku', icon: 'assets/project-icons/shalatku.png' },
+      { cat: 'apps', name: 'QuizMate', desc: 'Kuis internasional untuk pasar global.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.quizmate', icon: 'assets/project-icons/quizmate.png' },
+      { cat: 'apps', name: 'Yumegami', desc: 'Wallpaper anime bertenaga AI.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.yumegami', icon: 'assets/project-icons/yumegami.png' },
       { cat: 'apps', name: 'AyoMancing', desc: 'E-commerce produk mancing khas Indonesia.', tech: ['Flutter', 'Firebase'], status: 'wip' },
       { cat: 'apps', name: 'Warung Pintar', desc: 'POS untuk warung/toko Indonesia — multi-role.', tech: ['Flutter', 'Firebase'], status: 'wip' },
       { cat: 'apps', name: 'NoteSync', desc: 'Catatan offline-first + sync ke GitHub Gist.', tech: ['Flutter'], status: 'done' },
@@ -425,7 +429,7 @@
       { cat: 'tools', name: 'ZalifGuard', desc: 'Proteksi keamanan Windows via scheduled task.', tech: ['PowerShell'], status: 'live' },
       { cat: 'tools', name: 'Image Generator', desc: 'Generator gambar massal via Pollinations/Leonardo.', tech: ['Python'], status: 'done' },
       { cat: 'tools', name: 'ComfyUI Batch', desc: 'Generator gambar batch lokal — Flux + ESRGAN upscale.', tech: ['Python'], status: 'wip' },
-      { cat: 'tools', name: 'Vivi Creator Tools / TokenBoost', desc: 'Auto-refill token Leonardo.ai via Canva, multi-akun.', tech: ['Electron'], status: 'live' }
+      { cat: 'tools', name: 'Vivi Creator Tools / TokenBoost', desc: 'Auto-refill token Leonardo.ai via Canva, multi-akun.', tech: ['Electron'], status: 'live', icon: 'assets/project-icons/tokenboost.png' }
     ];
     const CATS = [
       { key: 'all', label: 'Semua' },
@@ -434,6 +438,7 @@
       { key: 'web', label: 'Web' },
       { key: 'tools', label: 'Tools & Desktop' }
     ];
+    const CATEGORY_EMOJI = { games: '&#127918;', apps: '&#128241;', web: '&#127760;', tools: '&#128295;' };
     let activeCat = 'all';
     let searchQuery = '';
     function catCount(key) { return key === 'all' ? PROJECTS.length : PROJECTS.filter(p => p.cat === key).length; }
@@ -469,12 +474,18 @@
         const linkHtml = p.link
           ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="project-link">Buka <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`
           : `<span class="project-link-disabled">${meta.label === 'Live' ? 'Aktif' : meta.label}</span>`;
+        const iconHtml = p.icon
+          ? `<img src="${p.icon}" alt="${p.name} icon" />`
+          : CATEGORY_EMOJI[p.cat];
         return `<div class="project-card fade-in visible${p.status === 'live' ? ' is-live' : ''}">
           <div class="project-top-row">
             <span class="project-cat-tag">${CATS.find(c => c.key === p.cat).label}</span>
             <span class="status-badge status-${p.status}"><span class="dot"></span>${meta.label}</span>
           </div>
-          <h3 class="project-name">${p.name}</h3>
+          <div class="project-header-row">
+            <div class="project-icon">${iconHtml}</div>
+            <h3 class="project-name">${p.name}</h3>
+          </div>
           <p class="project-desc">${p.desc}</p>
           <div class="project-tech">${p.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}</div>
           ${linkHtml}
