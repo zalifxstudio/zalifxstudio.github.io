@@ -126,6 +126,16 @@
     .ai-bar-labels { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
     .ai-bar-labels span:first-child { color: var(--accent); font-weight: 500; }
     .ai-bar-labels span:last-child { color: var(--blue); font-weight: 500; }
+    .legal-card { margin-top: 48px; background: var(--bg-card); border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: var(--radius); padding: 32px; }
+    .legal-card-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+    .legal-card-head h3 { font-family: var(--heading); font-size: 19px; font-weight: 700; }
+    .legal-badge { font-family: var(--heading); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); background: var(--accent-dim); padding: 5px 12px; border-radius: 100px; white-space: nowrap; }
+    .legal-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; margin-bottom: 20px; }
+    .legal-row dt { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .legal-row dd { font-size: 14px; color: var(--text); font-weight: 500; }
+    .legal-more { display: inline-flex; align-items: center; gap: 6px; font-family: var(--heading); font-size: 13px; font-weight: 600; color: var(--accent); transition: gap var(--transition); }
+    .legal-more:hover { gap: 9px; }
+    @media (max-width: 600px) { .legal-rows { grid-template-columns: 1fr; } }
     #skills { padding-bottom: 80px; }
     .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .skill-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition); position: relative; overflow: hidden; }
@@ -318,6 +328,19 @@
             <div class="ai-bar-labels"><span>90% Claude Code writes</span><span>10% I direct</span></div>
           </div>
         </div>
+      </div>
+      <div class="legal-card fade-in fade-in-delay-3">
+        <div class="legal-card-head">
+          <h3>PT Zalifx Digital Studio</h3>
+          <span class="legal-badge">Badan Usaha Resmi</span>
+        </div>
+        <dl class="legal-rows">
+          <div class="legal-row"><dt>Bentuk Usaha</dt><dd>Perseroan Perorangan</dd></div>
+          <div class="legal-row"><dt>SK Menteri Hukum</dt><dd>AHU-A107378.AH.01.30.Tahun 2026</dd></div>
+          <div class="legal-row"><dt>Bidang Usaha (KBLI)</dt><dd>58211 — Penerbitan Piranti Lunak Video Gim</dd></div>
+          <div class="legal-row"><dt>Domisili</dt><dd>Kabupaten Ciamis, Jawa Barat</dd></div>
+        </dl>
+        <a href="company/" class="legal-more">Lihat detail legalitas lengkap<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
   </section>
