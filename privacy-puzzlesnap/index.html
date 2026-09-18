@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — PuzzleSnap</title>
+  <meta name="description" content="Privacy Policy for PuzzleSnap, an offline-friendly picture puzzle game by zalifxstudio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12; --bg-card: #111120; --bg-surface: #181830;
+      --accent: #818cf8; --accent-2: #a78bfa; --accent-3: #c084fc;
+      --text: #f0f0f8; --muted: #8888aa; --faint: #44445a;
+      --border: rgba(129,140,248,0.12);
+      --heading: 'Space Grotesk', sans-serif; --body: 'Inter', sans-serif;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--body); font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+    ::selection { background: var(--accent); color: #fff; }
+    a { color: var(--accent-2); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-3); }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #0f0c29 0%, #1a1040 50%, #0a0a12 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 52px 24px 44px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 70% at 30% 20%, rgba(129,140,248,0.14) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 60% at 70% 80%, rgba(167,139,250,0.10) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .app-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.25);
+      border-radius: 999px; padding: 6px 16px 6px 8px;
+      font-family: var(--heading); font-size: 13px; font-weight: 600;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .app-badge .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: linear-gradient(135deg, #818cf8, #a78bfa, #c084fc);
+    }
+    header h1 {
+      font-family: var(--heading); font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fff 30%, var(--accent-2) 70%, var(--accent-3));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 10px;
+    }
+    .meta {
+      font-size: 13px; color: var(--muted);
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+
+    /* ── Layout ── */
+    .container { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    /* ── Section ── */
+    .section { margin-bottom: 44px; }
+    .section-title {
+      font-family: var(--heading); font-size: 18px; font-weight: 700;
+      letter-spacing: -0.01em; margin-bottom: 14px;
+      padding-left: 14px;
+      border-left: 3px solid;
+      border-image: linear-gradient(180deg, #818cf8, #a78bfa) 1;
+    }
+
+    p { color: #c0c0d8; margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { color: #c0c0d8; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+
+    /* ── Data table ── */
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .data-table th {
+      background: var(--bg-surface); color: var(--accent);
+      font-family: var(--heading); font-weight: 600; font-size: 12px;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 10px 14px; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .data-table td {
+      padding: 10px 14px; border-bottom: 1px solid var(--border);
+      vertical-align: top; color: #c0c0d8;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .tag {
+      display: inline-block; padding: 2px 8px; border-radius: 4px;
+      font-size: 11px; font-weight: 600; font-family: var(--heading);
+    }
+    .tag-server  { background: rgba(129,140,248,0.15); color: var(--accent); }
+    .tag-device  { background: rgba(167,139,250,0.15); color: var(--accent-2); }
+    .tag-no      { background: rgba(255,255,255,0.07); color: var(--muted); }
+    .tag-google  { background: rgba(192,132,252,0.15); color: var(--accent-3); }
+
+    /* ── Info card ── */
+    .info-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px; margin: 16px 0;
+    }
+    .info-card.indigo { border-color: rgba(129,140,248,0.3); background: rgba(129,140,248,0.06); }
+    .info-card.purple { border-color: rgba(167,139,250,0.3); background: rgba(167,139,250,0.06); }
+    .info-card.green  { border-color: rgba(52,211,153,0.25);  background: rgba(52,211,153,0.05); }
+    .info-card.red    { border-color: rgba(251,113,133,0.25);  background: rgba(251,113,133,0.05); }
+    .info-card p { color: #c0c0d8; }
+    .info-card strong { color: var(--text); }
+
+    /* ── Third party ── */
+    .third-party {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 16px 18px; margin: 10px 0;
+    }
+    .third-party-icon {
+      width: 38px; height: 38px; border-radius: 8px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; background: var(--bg-surface);
+    }
+    .third-party-info h4 { font-family: var(--heading); font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+    .third-party-info p { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+    .third-party-info a { font-size: 13px; }
+
+    /* ── Divider ── */
+    hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+    /* ── Lang label ── */
+    .lang-label {
+      display: inline-block; font-size: 11px; font-weight: 600;
+      font-family: var(--heading); text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 3px 10px; border-radius: 4px; margin-bottom: 32px;
+    }
+    .lang-en { background: rgba(129,140,248,0.12); color: var(--accent); }
+    .lang-id { background: rgba(192,132,252,0.12); color: var(--accent-3); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; padding: 28px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--faint);
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .data-table { font-size: 12px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+      .third-party { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-badge"><span class="dot"></span>PuzzleSnap · zalifxstudio</div>
+  <h1>Privacy Policy</h1>
+  <p style="color:#8888aa;font-size:15px;max-width:520px;margin:10px auto 0;">Kebijakan Privasi &amp; Privacy Policy</p>
+  <div class="meta">
+    <span>📅 Effective / Berlaku: <strong style="color:#e0e0f8;">18 September 2026</strong></span>
+    <span>📱 App ID: <code style="font-size:12px;color:#818cf8;">com.zalifxstudio.puzzlesnap</code></span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ══════════════════════════════════════════════
+       ENGLISH
+  ══════════════════════════════════════════════ -->
+  <span class="lang-label lang-en">🇬🇧 English</span>
+
+  <div class="section">
+    <h2 class="section-title">About This Policy</h2>
+    <p>This Privacy Policy explains how <strong>Imam Alif Firmansyah (zalifxstudio)</strong> handles information when you use <strong>PuzzleSnap</strong> ("App") on Android.</p>
+    <p>By using the App, you agree to the practices described in this policy.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">No Account, No Server Storage</h2>
+    <div class="info-card green">
+      <p>PuzzleSnap does not require an account and does not use Google Sign-In, Firebase, or any backend server. There is no leaderboard and no cloud sync. Every bit of your progress stays on your own device.</p>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Collected By</th>
+          <th>Stored On</th>
+          <th>Sent to Server?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Puzzle progress: completed levels, stars, coins, streaks, best times</td>
+          <td>App</td>
+          <td>Your device (SharedPreferences)</td>
+          <td><span class="tag tag-no">No</span></td>
+        </tr>
+        <tr>
+          <td>Settings and preferences</td>
+          <td>App</td>
+          <td>Your device (SharedPreferences)</td>
+          <td><span class="tag tag-no">No</span></td>
+        </tr>
+        <tr>
+          <td>Advertising ID, device info, IP, ad interaction and consent data</td>
+          <td>Google AdMob and mediated demand partners (e.g. Unity Ads)</td>
+          <td>Google's / partner servers</td>
+          <td><span class="tag tag-google">Yes, by Google/partners</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Advertising</h2>
+    <p>The Android version may display advertising supplied by Google AdMob and mediated demand partners such as Unity Ads. These providers may process device identifiers, approximate location derived from IP address, ad interactions, diagnostics, and consent signals to deliver, measure, secure, or personalize ads as permitted by your choices and applicable law.</p>
+    <p>Where required, the App presents Google's User Messaging Platform (UMP) consent form before requesting ads. You can revisit your advertising privacy choices any time from <em>Settings &amp; privacy</em> inside the app.</p>
+
+    <div class="third-party">
+      <div class="third-party-icon">📺</div>
+      <div class="third-party-info">
+        <h4>Google AdMob</h4>
+        <p>Displays banner, native, rewarded, and interstitial ads. May collect your Advertising ID, device information, and usage data to serve relevant ads.</p>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a>
+      </div>
+    </div>
+
+    <div class="third-party">
+      <div class="third-party-icon">🎮</div>
+      <div class="third-party-info">
+        <h4>Unity Ads (mediation)</h4>
+        <p>A bidding partner in Google AdMob's mediation stack for the same ad placements above.</p>
+        <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Privacy Policy →</a>
+      </div>
+    </div>
+
+    <div class="info-card indigo">
+      <p><strong>Rewarded ads are optional.</strong> A gameplay reward (such as the "fix one tile" assist) is granted only after the advertising SDK confirms the video was completed. You can also opt out of ad personalization via <em>Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization</em> on your Android device.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Analytics</h2>
+    <p>This build does not send gameplay analytics anywhere. It contains a telemetry interface whose default implementation discards every event on-device. If analytics is enabled in a future release, this policy and the in-app consent behavior will be updated before any collection begins.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Data Sharing</h2>
+    <ul>
+      <li>We do <strong>not sell</strong> your personal information to any third party.</li>
+      <li>We do not operate any server that stores your gameplay data — there is nothing on our side to share.</li>
+      <li>Advertising partners retain information under their own policies and legal obligations.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Data Retention &amp; Deletion</h2>
+    <p>Your local game data stays on your device until you remove it yourself:</p>
+    <ul>
+      <li><strong>In-app:</strong> Settings &amp; privacy → Reset all progress.</li>
+      <li><strong>Full removal:</strong> Uninstall the app, or clear its data via <em>Settings &gt; Apps &gt; PuzzleSnap &gt; Clear Data</em> on your device.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Children's Privacy</h2>
+    <p>PuzzleSnap is intended for a general audience and is not directed at children. The advertising configuration does not declare the app as child-directed.</p>
+    <div class="info-card red">
+      <p>If you are a parent or guardian and believe a child has used this app in a way that concerns you regarding advertising, non-personalized ads can be enabled at the operating-system level via Google Family Link.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Security</h2>
+    <ul>
+      <li>All network traffic used by the app (advertising SDKs) uses <strong>encrypted HTTPS connections</strong>; cleartext Android traffic is disabled.</li>
+      <li>Because there is no account and no server, there is no password or server-side profile to protect.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Your Rights</h2>
+    <ul>
+      <li><strong>Access &amp; deletion:</strong> Your data lives only on your device — view it in-app, or delete it via Reset all progress / uninstall.</li>
+      <li><strong>Opt-out of ad personalization:</strong> Via Settings &gt; Google &gt; Ads on your Android device.</li>
+      <li>Depending on your location, you may have additional rights regarding data processed by our advertising partners — see their policies linked above.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Contact</h2>
+    <div class="info-card purple">
+      <p><strong>Developer:</strong> Imam Alif Firmansyah</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/zalifxstudio" target="_blank" rel="noopener">github.com/zalifxstudio</a></p>
+      <p><strong>Website:</strong> <a href="https://zalifxstudio.github.io" target="_blank" rel="noopener">zalifxstudio.github.io</a></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. Continued use of the App after changes constitutes your acceptance of the revised policy.</p>
+  </div>
+
+  <hr />
+
+  <!-- ══════════════════════════════════════════════
+       BAHASA INDONESIA
+  ══════════════════════════════════════════════ -->
+  <span class="lang-label lang-id">🇮🇩 Bahasa Indonesia</span>
+
+  <div class="section">
+    <h2 class="section-title">Tentang Kebijakan Ini</h2>
+    <p>Kebijakan Privasi ini menjelaskan bagaimana <strong>Imam Alif Firmansyah (zalifxstudio)</strong> menangani informasi saat kamu menggunakan aplikasi <strong>PuzzleSnap</strong> ("Aplikasi") di Android.</p>
+    <p>Dengan menggunakan Aplikasi, kamu menyetujui praktik yang dijelaskan dalam kebijakan ini.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Tanpa Akun, Tanpa Penyimpanan Server</h2>
+    <div class="info-card green">
+      <p>PuzzleSnap tidak memerlukan akun dan tidak menggunakan Google Sign-In, Firebase, atau server backend apa pun. Tidak ada leaderboard, tidak ada sinkronisasi cloud. Seluruh progresmu tersimpan hanya di perangkatmu sendiri.</p>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Jenis Data</th>
+          <th>Dikumpulkan oleh</th>
+          <th>Disimpan di</th>
+          <th>Dikirim ke Server?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Progres puzzle: level selesai, bintang, koin, streak, waktu terbaik</td>
+          <td>Aplikasi</td>
+          <td>Perangkatmu (SharedPreferences)</td>
+          <td><span class="tag tag-no">Tidak</span></td>
+        </tr>
+        <tr>
+          <td>Pengaturan &amp; preferensi</td>
+          <td>Aplikasi</td>
+          <td>Perangkatmu (SharedPreferences)</td>
+          <td><span class="tag tag-no">Tidak</span></td>
+        </tr>
+        <tr>
+          <td>Advertising ID, info perangkat, IP, data interaksi &amp; consent iklan</td>
+          <td>Google AdMob dan mitra mediasi (mis. Unity Ads)</td>
+          <td>Server Google / mitra</td>
+          <td><span class="tag tag-google">Ya, oleh Google/mitra</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Iklan</h2>
+    <p>Versi Android dapat menampilkan iklan dari Google AdMob dan mitra mediasi seperti Unity Ads. Mitra ini dapat memproses device identifier, perkiraan lokasi dari IP address, interaksi iklan, diagnostik, dan sinyal consent untuk menampilkan, mengukur, mengamankan, atau mempersonalisasi iklan sesuai pilihanmu dan hukum yang berlaku.</p>
+    <p>Jika diwajibkan, Aplikasi menampilkan formulir consent Google User Messaging Platform (UMP) sebelum meminta iklan. Kamu bisa meninjau ulang pilihan privasi iklan kapan saja dari <em>Settings &amp; privacy</em> di dalam aplikasi.</p>
+    <div class="info-card indigo">
+      <p><strong>Iklan reward bersifat opsional.</strong> Reward gameplay (seperti bantuan "fix one tile") hanya diberikan setelah SDK iklan mengonfirmasi video selesai ditonton. Kamu juga bisa menonaktifkan personalisasi iklan lewat <em>Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization</em> di perangkat Android-mu.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Analitik</h2>
+    <p>Build ini tidak mengirim analitik gameplay ke mana pun. Ada interface telemetri di dalamnya, tapi implementasi default-nya membuang semua event di perangkat sendiri tanpa dikirim keluar.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Berbagi Data</h2>
+    <ul>
+      <li>Kami <strong>tidak menjual</strong> data pribadimu ke pihak mana pun.</li>
+      <li>Kami tidak mengoperasikan server yang menyimpan data gameplay-mu — tidak ada yang bisa kami bagikan di sisi kami.</li>
+      <li>Mitra iklan menyimpan informasi sesuai kebijakan dan kewajiban hukum mereka sendiri.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Penghapusan Data</h2>
+    <p>Data lokal permainanmu tersimpan di perangkat sampai kamu menghapusnya sendiri:</p>
+    <ul>
+      <li><strong>Di dalam aplikasi:</strong> Settings &amp; privacy → Reset all progress.</li>
+      <li><strong>Hapus total:</strong> Uninstall aplikasi, atau hapus datanya lewat <em>Settings &gt; Apps &gt; PuzzleSnap &gt; Clear Data</em> di perangkatmu.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Privasi Anak-Anak</h2>
+    <p>PuzzleSnap ditujukan untuk audiens umum dan tidak dirancang khusus untuk anak-anak. Konfigurasi iklan tidak mendeklarasikan aplikasi ini sebagai child-directed.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Kontak</h2>
+    <div class="info-card purple">
+      <p><strong>Developer:</strong> Imam Alif Firmansyah</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/zalifxstudio" target="_blank" rel="noopener">github.com/zalifxstudio</a></p>
+      <p><strong>Website:</strong> <a href="https://zalifxstudio.github.io" target="_blank" rel="noopener">zalifxstudio.github.io</a></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Perubahan Kebijakan</h2>
+    <p>Kami dapat memperbarui Kebijakan Privasi ini sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini dengan tanggal pembaruan terbaru. Penggunaan Aplikasi yang berkelanjutan setelah perubahan dianggap sebagai persetujuanmu terhadap kebijakan yang baru.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Imam Alif Firmansyah · <a href="https://zalifxstudio.github.io" target="_blank" rel="noopener">zalifxstudio</a></p>
+  <p style="margin-top:6px;">Privacy Policy — PuzzleSnap · <code style="font-size:11px;">com.zalifxstudio.puzzlesnap</code></p>
+</footer>
+
+</body>
+</html>
