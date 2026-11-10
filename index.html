@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imam Alif Firmansyah — zalifxstudio</title>
   <meta name="description" content="Imam Alif Firmansyah (zalifxstudio) — Concept-driven, AI-powered developer & graphic designer from Ciamis, Jawa Barat." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <script>
     (function () {
       var saved = localStorage.getItem('theme');
@@ -438,7 +439,7 @@
       // Games
       { cat: 'games', name: 'Wordzy', desc: 'Word-scramble puzzle bilingual 5 bahasa, IAP + AdMob.', tech: ['Capacitor', 'Firebase', 'AdMob'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.wordzy.game', icon: 'assets/project-icons/wordzy.png' },
       { cat: 'games', name: 'Donghua 3D Quiz', desc: 'Kuis karakter Donghua 3D — featured di Play Store.', tech: ['Flutter', 'Firebase'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.donghua3dquiz', icon: 'assets/project-icons/donghua3dquiz.png' },
-      { cat: 'games', name: 'PintarQuiz', desc: 'Kuis SD/SMP/SMA, rating 5.0 bintang.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.pintarquiz', icon: 'assets/project-icons/pintarquiz.png' },
+      { cat: 'games', name: 'PintarQuiz', desc: 'Aplikasi kuis edukasi Android untuk siswa SD/SMP/SMA.', tech: ['Flutter'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.pintarquiz', supportLink: '/pintarquiz/', icon: 'assets/project-icons/pintarquiz.png' },
       { cat: 'games', name: 'BubbleFall', desc: 'Match-3 bubble popping dengan power-up.', tech: ['Capacitor', 'AdMob'], status: 'done' },
       { cat: 'games', name: 'PixlDash', desc: 'Pixel endless runner — 18 skin & passive ability.', tech: ['Capacitor', 'AdMob'], status: 'live', link: 'https://play.google.com/store/apps/details?id=com.zalifxstudio.pixldash' },
       { cat: 'games', name: 'LumiRise', desc: 'Dual tema NES + Ocean Kawaii, treasure chest IAP.', tech: ['Capacitor'], status: 'wip' },
@@ -544,6 +545,9 @@
         const linkHtml = p.link
           ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="project-link">Buka <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`
           : `<span class="project-link-disabled">${meta.label === 'Live' ? 'Aktif' : meta.label}</span>`;
+        const supportLinkHtml = p.supportLink
+          ? `<a href="${p.supportLink}" class="project-link">Informasi aplikasi &amp; privasi →</a>`
+          : '';
         const iconHtml = p.icon
           ? `<img src="${p.icon}" alt="${p.name} icon" />`
           : CATEGORY_EMOJI[p.cat];
@@ -559,6 +563,7 @@
           <p class="project-desc">${p.desc}</p>
           <div class="project-tech">${p.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}</div>
           ${linkHtml}
+          ${supportLinkHtml}
         </div>`;
       }).join('');
     }

@@ -16,13 +16,16 @@ Website ini adalah portofolio pribadi yang menampilkan profil, keahlian, dan pro
 
 ## Aplikasi & Proyek
 
-### PintarQuiz — Kuis SD & SMP
-Game kuis edukasi Android untuk pelajar SD dan SMP. Dirancang untuk pengalaman belajar yang menyenangkan dengan tampilan modern, sistem skor, dan kategori soal yang variatif.
+### PintarQuiz — Kuis SD, SMP & SMA
+Game kuis edukasi Android untuk pelajar SD, SMP, dan SMA. Dirancang untuk pengalaman belajar yang menyenangkan dengan tampilan modern, sistem skor, dan kategori soal yang variatif.
 
 - **Platform:** Android (Google Play Store)
 - **Package ID:** `com.zalifxstudio.pintarquiz`
 - **Teknologi:** Flutter · Dart
 - **Link:** https://play.google.com/store/apps/details?id=com.zalifxstudio.pintarquiz
+- **App information & support:** https://zalifxstudio.github.io/pintarquiz/
+- **Privacy policy:** https://zalifxstudio.github.io/privacy-pintarquiz/
+- **Terms of use:** https://zalifxstudio.github.io/terms-pintarquiz/
 
 ### Donghua 3D Quiz
 Game Android kuis bertema Donghua (animasi China 3D). Tantang pengetahuan tentang karakter, cerita, dan dunia Donghua dalam format kuis interaktif.
@@ -64,6 +67,9 @@ Web app absensi untuk wartawan. Sistem pencatatan kehadiran yang simpel, cepat, 
 ```
 zalifxstudio.github.io/
 ├── index.html       # Halaman utama portfolio
+├── pintarquiz/      # Informasi aplikasi untuk homepage OAuth dan dukungan
+├── terms-pintarquiz/ # Syarat penggunaan PintarQuiz
+├── privacy-pintarquiz/ # Kebijakan privasi PintarQuiz
 ├── app-ads.txt      # Authorized sellers file (Google AdMob)
 ├── robots.txt       # Crawler directives
 ├── sitemap.xml      # Site map for search engines

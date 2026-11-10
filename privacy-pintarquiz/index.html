@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Pintar Quiz</title>
-  <meta name="description" content="Privacy Policy for Pintar Quiz: Kuis SD SMP SMA by zalifxstudio." />
+  <title>Privacy Policy — PintarQuiz: School Quiz App</title>
+  <meta name="description" content="Privacy Policy for PintarQuiz: School Quiz App by Zalifx Studio." />
+  <link rel="icon" type="image/svg+xml" href="/pintarquiz/favicon.svg" />
+  <link rel="canonical" href="https://zalifxstudio.github.io/privacy-pintarquiz/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -113,11 +115,11 @@
 <body>
 
 <header>
-  <div class="app-badge"><span class="dot"></span>Pintar Quiz · zalifxstudio</div>
+  <div class="app-badge"><span class="dot"></span>PintarQuiz: School Quiz App · Zalifx Studio</div>
   <h1>Privacy Policy</h1>
   <p style="color:#9090a8;font-size:15px;max-width:520px;margin:10px auto 0;">Kebijakan Privasi &amp; Privacy Policy</p>
   <div class="meta">
-    <span>📅 Berlaku / Effective: <strong style="color:#e0e0f0;">1 Juni 2025</strong></span>
+    <span>📅 Berlaku / Effective: <strong style="color:#e0e0f0;">10 November 2026</strong></span>
     <span>📱 App ID: <code style="font-size:12px;color:#5aadff;">com.zalifxstudio.pintarquiz</code></span>
   </div>
 </header>
@@ -129,8 +131,8 @@
 
   <div class="section">
     <h2 class="section-title">Tentang Kebijakan Ini</h2>
-    <p>Kebijakan Privasi ini menjelaskan bagaimana <strong>Imam Alif Firmansyah (zalifxstudio)</strong> mengelola informasi ketika kamu menggunakan aplikasi <strong>Pintar Quiz: Kuis SD SMP SMA</strong> ("Aplikasi") di Android.</p>
-    <p>Dengan menggunakan Aplikasi, kamu menyetujui praktik yang dijelaskan dalam kebijakan ini.</p>
+    <p>Kebijakan Privasi ini menjelaskan bagaimana <strong>Imam Alif Firmansyah (Zalifx Studio)</strong> mengelola informasi ketika kamu menggunakan aplikasi <strong>PintarQuiz: School Quiz App</strong> ("Aplikasi") di Android.</p>
+    <p>Kebijakan ini merangkum data yang diproses oleh Aplikasi, Firebase, Google Play, dan penyedia iklan ketika fitur terkait digunakan. Pilihan login dan izin notifikasi bersifat terpisah dari penggunaan fitur tamu.</p>
   </div>
 
   <div class="section">
@@ -141,39 +143,51 @@
       </thead>
       <tbody>
         <tr>
-          <td>Advertising ID, info perangkat, IP, data penggunaan iklan</td>
+          <td>Advertising ID, info perangkat/jaringan, dan sinyal penggunaan iklan</td>
           <td>Google AdMob</td>
           <td>Server Google</td>
           <td><span class="tag tag-device">Ya, oleh Google</span></td>
         </tr>
         <tr>
-          <td>Nama tampilan Google, foto profil</td>
+          <td>UID Firebase, email akun Google, nama tampilan, dan foto profil (jika tersedia)</td>
           <td>Google Sign-In</td>
           <td>Firebase (cloud)</td>
           <td><span class="tag tag-cloud">Ya, opsional</span></td>
         </tr>
         <tr>
-          <td>Skor kuis, riwayat kuis, progress badge</td>
+          <td>Skor dan progres kuis, XP, streak, achievement, token, status Premium, profil leaderboard, dan data duel daring</td>
           <td>Aplikasi</td>
           <td>Firebase Firestore (jika login Google) / Perangkat lokal (mode tamu)</td>
           <td><span class="tag tag-cloud">Ya (akun Google)</span></td>
         </tr>
         <tr>
-          <td>Preferensi app (mode audio, tema)</td>
+          <td>Preferensi dan progres mode tamu</td>
           <td>Aplikasi</td>
           <td>Perangkatmu (SharedPreferences)</td>
           <td><span class="tag tag-no">Tidak</span></td>
         </tr>
         <tr>
-          <td>FCM token (untuk notifikasi pengingat belajar)</td>
+          <td>Firebase anonymous UID dan FCM device token untuk fitur notifikasi (akun Google maupun tamu)</td>
           <td>Firebase Cloud Messaging</td>
           <td>Server Firebase</td>
           <td><span class="tag tag-cloud">Ya, oleh Firebase</span></td>
         </tr>
+        <tr>
+          <td>ID produk, status/ID pesanan/waktu pembelian, saldo token, dan token Play yang dikirim sementara untuk validasi; server menyimpan hash token untuk mencegah penebusan ulang</td>
+          <td>Google Play Billing dan backend Firebase</td>
+          <td>Google Play dan Firebase Firestore</td>
+          <td><span class="tag tag-cloud">Data transaksi terbatas</span></td>
+        </tr>
+        <tr>
+          <td>Laporan crash dan diagnostik aplikasi pada build produksi, termasuk versi aplikasi/perangkat dan stack trace</td>
+          <td>Firebase Crashlytics</td>
+          <td>Firebase</td>
+          <td><span class="tag tag-cloud">Ya, untuk diagnostik</span></td>
+        </tr>
       </tbody>
     </table>
     <div class="info-card green">
-      <p><strong>Mode Tamu:</strong> Jika kamu bermain tanpa login Google, semua data tersimpan hanya di perangkatmu dan tidak dikirim ke server manapun.</p>
+      <p><strong>Mode Tamu:</strong> Progres kuis dan preferensi disimpan di perangkat. Untuk notifikasi, Firebase dapat membuat UID anonim dan menyimpan FCM device token di Firestore. Data tersebut tidak memakai profil Google kecuali kamu memilih login Google.</p>
     </div>
   </div>
 
@@ -191,34 +205,48 @@
       <div class="third-party-icon">🔐</div>
       <div class="third-party-info">
         <h4>Firebase (Google)</h4>
-        <p>Firebase Auth untuk login Google, Firestore untuk penyimpanan skor dan leaderboard, Cloud Messaging untuk notifikasi belajar harian.</p>
+        <p>Firebase Authentication untuk akun Google dan identitas anonim tamu; Firestore untuk profil/progres, leaderboard, duel, token dan status Premium; Cloud Messaging untuk notifikasi; Cloud Functions untuk memvalidasi pembelian token dengan Google Play; serta Crashlytics untuk laporan crash pada build produksi.</p>
         <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Kebijakan Privasi Firebase →</a>
       </div>
     </div>
+    <div class="third-party">
+      <div class="third-party-icon">🛒</div>
+      <div class="third-party-info">
+        <h4>Google Play Billing</h4>
+        <p>Google Play memproses pembayaran. Aplikasi menerima status dan identitas produk pembelian; backend memverifikasi pembelian token dengan Google Play. Aplikasi tidak menerima nomor kartu atau kredensial pembayaran.</p>
+        <a href="https://support.google.com/googleplay/answer/2850369" target="_blank" rel="noopener">Bantuan pembelian Google Play →</a>
+      </div>
+    </div>
     <div class="info-card blue">
-      <p>Kamu dapat <strong>menonaktifkan personalisasi iklan</strong> melalui <em>Pengaturan &gt; Google &gt; Iklan &gt; Nonaktifkan Personalisasi Iklan</em> di perangkat Android-mu.</p>
+      <p>Permintaan iklan mengikuti pilihan privasi/consent yang ditampilkan oleh Google UMP dan pengaturan iklan Google di perangkat. Pilihan yang tersedia dapat berbeda menurut wilayah dan konfigurasi perangkat.</p>
     </div>
   </div>
 
   <div class="section">
     <h2 class="section-title">Leaderboard</h2>
-    <p>Jika kamu login dengan akun Google dan memiliki skor di Leaderboard, nama tampilan Google-mu akan ditampilkan secara publik di dalam Aplikasi. Kamu dapat logout kapan saja melalui menu Profil untuk kembali ke mode tamu.</p>
+    <p>Jika kamu memakai fitur leaderboard atau duel daring dengan akun Google, nama tampilan dan skor terkait dapat terlihat oleh pengguna lain di dalam Aplikasi. Duel daring juga menyimpan UID peserta, kode/sesi duel, kategori dan ID soal, skor, status, serta waktu sesi di Firestore. Duel melawan komputer tidak mengirim sesi duel ke Firestore.</p>
   </div>
 
   <div class="section">
     <h2 class="section-title">Notifikasi</h2>
-    <p>Aplikasi mengirimkan notifikasi pengingat belajar harian melalui Firebase Cloud Messaging. Kamu dapat menonaktifkan notifikasi melalui pengaturan notifikasi di perangkat Android-mu kapan saja.</p>
+    <p>Aplikasi meminta izin notifikasi Android untuk pengingat belajar. Jika layanan push digunakan, Firebase Cloud Messaging memproses FCM device token dan Firebase menyimpan token yang dikaitkan dengan UID aplikasi. Kamu dapat menonaktifkan notifikasi lewat pengaturan Android. Saat akun Google logout, token akun dihapus; token anonim mode tamu dapat tetap tersimpan di bawah UID anonim sampai token itu diperbarui atau data tersebut dihapus.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Penyimpanan dan Retensi Data</h2>
+    <p>Progres mode tamu tersimpan di perangkat sampai data Aplikasi dibersihkan melalui pengaturan Android. Data yang tersimpan di Firestore tetap ada saat logout dan diproses untuk fitur akun sampai kamu meminta penghapusannya. Token notifikasi akun Google dihapus saat logout; token anonim dapat tetap terkait dengan UID anonim sampai diperbarui atau datanya dihapus. Catatan penebusan pembelian minimum dapat disimpan untuk mencegah pembelian dikreditkan dua kali dan membantu pemeriksaan transaksi. Data diagnostik pihak ketiga mengikuti masa retensi penyedia masing-masing.</p>
   </div>
 
   <div class="section">
     <h2 class="section-title">Privasi Anak-Anak</h2>
-    <p>Aplikasi ditujukan untuk pelajar SD, SMP, dan SMA. Kami tidak secara sengaja mengumpulkan data pribadi dari pengguna di bawah usia 13 tahun tanpa persetujuan orang tua. Jika kamu adalah orang tua atau wali dan menemukan adanya data anak di Aplikasi, hubungi kami untuk penghapusan.</p>
+    <p>Aplikasi ditujukan untuk pelajar SD, SMP, dan SMA, termasuk anak-anak. Data akun, progres belajar, dan data perangkat yang dijelaskan dalam kebijakan ini dapat diproses saat fitur terkait digunakan. Orang tua atau wali dapat menghubungi kami untuk meminta peninjauan atau penghapusan data anak.</p>
   </div>
 
   <div class="section">
     <h2 class="section-title">Hak Penggunamu</h2>
     <ul>
-      <li><strong>Hapus akun & data:</strong> Logout dari Aplikasi → data lokal terhapus. Untuk hapus data Firestore, lihat langkah di bawah.</li>
+      <li><strong>Logout:</strong> Mengakhiri sesi akun pada perangkat dan menghapus FCM token akun dari Firestore; logout tidak otomatis menghapus progres atau data cloud.</li>
+      <li><strong>Hapus data akun:</strong> Hubungi kami melalui alamat pada bagian penghapusan akun di bawah. Data transaksi minimum dapat dipertahankan untuk mencegah penebusan ganda dan membantu penanganan pembelian.</li>
       <li><strong>Hapus data lokal:</strong> Pengaturan &gt; Aplikasi &gt; Pintar Quiz &gt; Hapus Data.</li>
       <li><strong>Nonaktifkan notifikasi:</strong> Pengaturan &gt; Aplikasi &gt; Pintar Quiz &gt; Notifikasi.</li>
       <li><strong>Reset Advertising ID:</strong> Pengaturan &gt; Google &gt; Iklan.</li>
@@ -226,14 +254,15 @@
   </div>
 
   <div class="section" id="hapus-akun">
-    <h2 class="section-title">Penghapusan Akun & Data — Pintar Quiz: Kuis SD SMP SMA</h2>
-    <p>Untuk meminta penghapusan akun dan data terkait di aplikasi <strong>Pintar Quiz</strong> (zalifxstudio), ikuti langkah berikut:</p>
+    <h2 class="section-title">Penghapusan Akun & Data — PintarQuiz: School Quiz App</h2>
+    <p>Untuk meminta penghapusan akun dan data terkait di aplikasi <strong>PintarQuiz: School Quiz App</strong> (Zalifx Studio), ikuti langkah berikut:</p>
     <ol>
-      <li>Kirim email ke <strong>imam.aliffirmansyah@gmail.com</strong> dengan subjek "Hapus Akun Pintar Quiz", sertakan alamat email Google yang kamu pakai login di aplikasi.</li>
+      <li>Kirim email ke <strong>imam.aliffirmansyah@gmail.com</strong> dengan subjek "Hapus Akun PintarQuiz", sertakan alamat email Google yang kamu pakai login di aplikasi.</li>
       <li>Kami akan memverifikasi identitas dan memproses penghapusan dalam maksimal <strong>7 hari kerja</strong>.</li>
-      <li><strong>Data yang dihapus:</strong> nama tampilan Google, foto profil, skor kuis, riwayat kuis, progress badge, dan FCM token yang tersimpan di Firebase.</li>
-      <li><strong>Data yang mungkin tetap tersimpan:</strong> log analitik teragregasi/anonim yang tidak terhubung ke identitasmu, dan data Advertising ID yang dikelola langsung oleh Google AdMob sesuai kebijakan mereka sendiri (di luar kendali kami).</li>
-      <li><strong>Alternatif tanpa hapus akun:</strong> Logout dari aplikasi langsung menghapus semua data lokal di perangkatmu (kembali ke mode tamu).</li>
+      <li><strong>Data akun yang dapat dihapus:</strong> UID dan profil Google yang tersimpan, email akun, nama/foto profil, data progres dan gamifikasi, data leaderboard/duel, status aplikasi, serta FCM token yang terkait dengan akun.</li>
+      <li><strong>Catatan transaksi:</strong> hash token pembelian, ID pesanan, produk, jumlah token, waktu, dan UID dapat disimpan terbatas untuk mencegah penebusan ulang dan membantu pemeriksaan pembelian. Nomor kartu dan kredensial pembayaran diproses oleh Google Play, bukan disimpan oleh Aplikasi.</li>
+      <li><strong>Data pihak ketiga:</strong> data iklan dan diagnostik yang dikelola Google mengikuti kebijakan serta proses penghapusan Google.</li>
+      <li><strong>Logout bukan penghapusan akun:</strong> logout hanya mengakhiri sesi di perangkat; kirim permintaan email di atas untuk meminta penghapusan data cloud.</li>
     </ol>
   </div>
 
@@ -258,8 +287,7 @@
 
   <div class="section">
     <h2 class="section-title">About This Policy</h2>
-    <p>This Privacy Policy describes how <strong>Imam Alif Firmansyah (zalifxstudio)</strong> handles information when you use the <strong>Pintar Quiz: Kuis SD SMP SMA</strong> app ("App") on Android.</p>
-    <p>By using the App, you agree to the practices described in this policy.</p>
+    <p>This Privacy Policy summarizes information processed by the App, Firebase, Google Play, and advertising providers when related features are used. Google sign-in and notification permissions are separate from using guest features.</p>
   </div>
 
   <div class="section">
@@ -270,39 +298,51 @@
       </thead>
       <tbody>
         <tr>
-          <td>Advertising ID, device info, IP address, ad usage data</td>
+          <td>Advertising ID, device/network information, and ad usage signals</td>
           <td>Google AdMob</td>
           <td>Google's servers</td>
           <td><span class="tag tag-device">Yes, by Google</span></td>
         </tr>
         <tr>
-          <td>Google display name, profile photo</td>
+          <td>Firebase UID, Google account email, display name, and profile photo (if available)</td>
           <td>Google Sign-In</td>
           <td>Firebase (cloud)</td>
           <td><span class="tag tag-cloud">Yes, optional</span></td>
         </tr>
         <tr>
-          <td>Quiz scores, quiz history, badge progress</td>
+          <td>Quiz scores and progress, XP, streaks, achievements, tokens, Premium status, leaderboard profile, and online duel data</td>
           <td>App</td>
           <td>Firebase Firestore (Google account) / Local device (guest mode)</td>
           <td><span class="tag tag-cloud">Yes (Google account)</span></td>
         </tr>
         <tr>
-          <td>App preferences (audio mode, theme)</td>
+          <td>Preferences and guest-mode progress</td>
           <td>App</td>
           <td>Your device (SharedPreferences)</td>
           <td><span class="tag tag-no">No</span></td>
         </tr>
         <tr>
-          <td>FCM token (for study reminder notifications)</td>
+          <td>Firebase anonymous UID and FCM device token for notifications (Google and guest accounts)</td>
           <td>Firebase Cloud Messaging</td>
           <td>Firebase servers</td>
           <td><span class="tag tag-cloud">Yes, by Firebase</span></td>
         </tr>
+        <tr>
+          <td>Product ID, status/order ID/purchase time, token balance, and a Play purchase token temporarily sent for verification; the server retains its hash to prevent duplicate redemption</td>
+          <td>Google Play Billing and Firebase backend</td>
+          <td>Google Play and Firebase Firestore</td>
+          <td><span class="tag tag-cloud">Limited transaction data</span></td>
+        </tr>
+        <tr>
+          <td>Crash reports and production app diagnostics, including app/device versions and stack traces</td>
+          <td>Firebase Crashlytics</td>
+          <td>Firebase</td>
+          <td><span class="tag tag-cloud">Yes, for diagnostics</span></td>
+        </tr>
       </tbody>
     </table>
     <div class="info-card green">
-      <p><strong>Guest Mode:</strong> If you play without logging in with Google, all data is stored only on your device and never sent to any server.</p>
+      <p><strong>Guest Mode:</strong> Quiz progress and preferences are stored on your device. For notifications, Firebase may create an anonymous UID and store an FCM device token in Firestore. Guest data does not use a Google profile unless you choose Google sign-in.</p>
     </div>
   </div>
 
@@ -320,34 +360,48 @@
       <div class="third-party-icon">🔐</div>
       <div class="third-party-info">
         <h4>Firebase (Google)</h4>
-        <p>Firebase Auth for Google Sign-In, Firestore for score and leaderboard storage, Cloud Messaging for daily study reminders.</p>
+        <p>Firebase Authentication for Google and anonymous guest identities; Firestore for profiles/progress, leaderboards, duels, tokens, and Premium status; Cloud Messaging for notifications; Cloud Functions to verify token purchases with Google Play; and Crashlytics for crash reports on production builds.</p>
         <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy →</a>
       </div>
     </div>
+    <div class="third-party">
+      <div class="third-party-icon">🛒</div>
+      <div class="third-party-info">
+        <h4>Google Play Billing</h4>
+        <p>Google Play processes payments. The App receives purchase status and product identifiers; the backend verifies token purchases with Google Play. The App does not receive card numbers or payment credentials.</p>
+        <a href="https://support.google.com/googleplay/answer/2850369" target="_blank" rel="noopener">Google Play purchase help →</a>
+      </div>
+    </div>
     <div class="info-card blue">
-      <p>You can <strong>opt out of ad personalization</strong> via <em>Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization</em> on your Android device.</p>
+      <p>Ad requests follow the privacy/consent choices shown by Google UMP and Google ad settings on your device. Available choices may vary by region and device configuration.</p>
     </div>
   </div>
 
   <div class="section">
     <h2 class="section-title">Leaderboard</h2>
-    <p>If you sign in with a Google account and appear on the Leaderboard, your Google display name will be shown publicly within the App. You can log out at any time from the Profile menu to switch to guest mode.</p>
+    <p>If you use the leaderboard or online duel with a Google account, your display name and related score may be visible to other App users. Online duels also store participant UIDs, duel code/session, category and question IDs, scores, status, and session times in Firestore. Computer duels do not send duel sessions to Firestore.</p>
   </div>
 
   <div class="section">
     <h2 class="section-title">Notifications</h2>
-    <p>The App sends daily study reminder notifications via Firebase Cloud Messaging. You can disable notifications at any time through your Android device notification settings.</p>
+    <p>The App requests Android notification permission for study reminders. If push notifications are used, Firebase Cloud Messaging processes an FCM device token and Firebase stores it with the App UID. You can disable notifications in Android settings. A Google account token is removed when you log out; an anonymous guest token may remain under its anonymous UID until the token is refreshed or the data is deleted.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Data Storage and Retention</h2>
+    <p>Guest progress remains on the device until App data is cleared through Android settings. Firestore data remains after logout and is processed for account features until you request deletion. A Google account notification token is removed when you log out; an anonymous guest token may remain under its anonymous UID until refreshed or deleted. Minimum purchase-redemption records may be retained to prevent duplicate credit and help investigate transactions. Third-party diagnostic data follows each provider's retention practices.</p>
   </div>
 
   <div class="section">
     <h2 class="section-title">Children's Privacy</h2>
-    <p>The App is designed for elementary, middle, and high school students. We do not knowingly collect personal data from users under 13 without parental consent. If you are a parent or guardian and discover your child's data in the App, please contact us for deletion.</p>
+    <p>The App is intended for elementary, middle, and high school students, including children. Account, learning progress, and device data described in this policy may be processed when related features are used. Parents or guardians may contact us to request review or deletion of a child's data.</p>
   </div>
 
   <div class="section">
     <h2 class="section-title">Your Rights</h2>
     <ul>
-      <li><strong>Delete account &amp; data:</strong> Log out from the App to clear local data. To delete Firestore data, see the steps below.</li>
+      <li><strong>Log out:</strong> Ends the account session on the device and removes the account FCM token from Firestore; logging out does not automatically delete progress or cloud data.</li>
+      <li><strong>Delete account data:</strong> Contact us using the address in the deletion section below. Minimum transaction records may be retained to prevent duplicate redemption and assist purchase support.</li>
       <li><strong>Clear local data:</strong> Settings &gt; Apps &gt; Pintar Quiz &gt; Clear Data.</li>
       <li><strong>Disable notifications:</strong> Settings &gt; Apps &gt; Pintar Quiz &gt; Notifications.</li>
       <li><strong>Reset Advertising ID:</strong> Settings &gt; Google &gt; Ads.</li>
@@ -355,14 +409,15 @@
   </div>
 
   <div class="section" id="account-deletion">
-    <h2 class="section-title">Account & Data Deletion — Pintar Quiz: Kuis SD SMP SMA</h2>
-    <p>To request deletion of your account and related data in the <strong>Pintar Quiz</strong> app (zalifxstudio), follow these steps:</p>
+    <h2 class="section-title">Account & Data Deletion — PintarQuiz: School Quiz App</h2>
+    <p>To request deletion of your account and related data in <strong>PintarQuiz: School Quiz App</strong> by Zalifx Studio, follow these steps:</p>
     <ol>
-      <li>Send an email to <strong>imam.aliffirmansyah@gmail.com</strong> with the subject "Delete Pintar Quiz Account", including the Google email you use to sign in to the app.</li>
+      <li>Send an email to <strong>imam.aliffirmansyah@gmail.com</strong> with the subject "Delete PintarQuiz Account", including the Google email you use to sign in to the app.</li>
       <li>We will verify your identity and process the deletion within a maximum of <strong>7 business days</strong>.</li>
-      <li><strong>Data deleted:</strong> Google display name, profile photo, quiz scores, quiz history, badge progress, and FCM token stored in Firebase.</li>
-      <li><strong>Data that may be retained:</strong> aggregated/anonymized analytics logs not linked to your identity, and Advertising ID data managed directly by Google AdMob under its own policy (outside our control).</li>
-      <li><strong>Alternative without deleting your account:</strong> Logging out of the App instantly clears all local data on your device (returns to guest mode).</li>
+      <li><strong>Account data that can be deleted:</strong> Stored UID and Google profile, account email, display name/photo, progress and gamification data, leaderboard/duel data, app status, and FCM token linked to the account.</li>
+      <li><strong>Transaction records:</strong> A purchase-token hash, order ID, product, token amount, time, and UID may be retained as needed to prevent duplicate redemption and assist purchase reviews. Google Play processes card numbers and payment credentials; the App does not store them.</li>
+      <li><strong>Third-party data:</strong> Advertising and diagnostic data managed by Google follow Google's policies and deletion processes.</li>
+      <li><strong>Logging out is not account deletion:</strong> It only ends the device session; email the address above to request cloud-data deletion.</li>
     </ol>
   </div>
 
@@ -383,8 +438,8 @@
 </div>
 
 <footer>
-  <p>© 2025 Imam Alif Firmansyah · <a href="https://zalifxstudio.github.io" target="_blank" rel="noopener">zalifxstudio</a></p>
-  <p style="margin-top:6px;">Privacy Policy — Pintar Quiz · <code style="font-size:11px;">com.zalifxstudio.pintarquiz</code></p>
+  <p>© 2026 Imam Alif Firmansyah · <a href="https://zalifxstudio.github.io/pintarquiz/" target="_blank" rel="noopener">PintarQuiz app information</a> · <a href="https://zalifxstudio.github.io/terms-pintarquiz/" target="_blank" rel="noopener">Terms of Use</a> · <a href="https://zalifxstudio.github.io" target="_blank" rel="noopener">zalifxstudio</a></p>
+  <p style="margin-top:6px;">Privacy Policy — PintarQuiz: School Quiz App · <code style="font-size:11px;">com.zalifxstudio.pintarquiz</code></p>
 </footer>
 
 </body>
