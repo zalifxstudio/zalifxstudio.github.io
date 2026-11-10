@@ -23,7 +23,7 @@ Game kuis edukasi Android untuk pelajar SD, SMP, dan SMA. Dirancang untuk pengal
 - **Package ID:** `com.zalifxstudio.pintarquiz`
 - **Teknologi:** Flutter · Dart
 - **Link:** https://play.google.com/store/apps/details?id=com.zalifxstudio.pintarquiz
-- **App information & support:** https://zalifxstudio.github.io/pintarquiz/
+- **App information & support:** https://zalifxstudio.github.io/pintarquiz-support/
 - **Privacy policy:** https://zalifxstudio.github.io/privacy-pintarquiz/
 - **Terms of use:** https://zalifxstudio.github.io/terms-pintarquiz/
 
@@ -67,7 +67,7 @@ Web app absensi untuk wartawan. Sistem pencatatan kehadiran yang simpel, cepat, 
 ```
 zalifxstudio.github.io/
 ├── index.html       # Halaman utama portfolio
-├── pintarquiz/      # Informasi aplikasi untuk homepage OAuth dan dukungan
+├── pintarquiz-support/ # Informasi aplikasi untuk homepage OAuth dan dukungan
 ├── terms-pintarquiz/ # Syarat penggunaan PintarQuiz
 ├── privacy-pintarquiz/ # Kebijakan privasi PintarQuiz
 ├── app-ads.txt      # Authorized sellers file (Google AdMob)
